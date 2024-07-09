@@ -1,0 +1,231 @@
+<div class="list-group mt-3 mb-3">
+    <a class="list-group-item list-group-item-warning list-group-item-action flex-column align-items-start active">
+        <div class="d-flex w-100 justify-content-between mb-3">
+            <h2 class="mb-1 text-center">Trigonometría</h2>
+            <small class="text-center">
+                <p>Lial, M. L., Hornsby, J., & Schneider, D. I. (2012). Trigonometry (10th ed.). Pearson.</p>
+            </small>
+        </div>
+
+        <div class="accordion">
+
+            <div class="contenedor">
+                <app-chatbot-interfaz></app-chatbot-interfaz>
+            </div>
+            
+            <div class="accordion-item bg-warning text-dark">
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(1)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>¿Qué es la trigonometría?</h3>
+                    </button>
+                </h2>
+
+                <div *ngIf="mostrarContenido">
+                    <div class="accordion-body text-justify">
+                        <p>
+                            La <strong class="text-azul-real">trigonometría</strong> es una rama de las <strong class="text-azul-real">
+                            matemáticas</strong> que estudia las relaciones entre los <strong class="text-azul-real">ángulos</strong> y 
+                            los <strong class="text-azul-real">lados</strong> de los <strong class="text-azul-real">triángulos</strong>. 
+                            Se utiliza principalmente para <strong class="text-azul-real">resolver triángulo
+                            </strong>, analizar <strong class="text-azul-real">ondas periódicas</strong> y 
+                            modelar <strong class="text-azul-real">fenómenos oscilatorios</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(2)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Funciones trigonométricas</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov2">
+                    <div class="accordion-body text-justify">
+                        <p>
+                            Las funciones <strong class="text-azul-real">trigonométricas básicas</strong> son el 
+                            <strong class="text-azul-real">seno, coseno y tangente</strong>:</p>
+                        <p>
+                            • El <strong class="text-azul-real">seno</strong> de un ángulo en un triángulo 
+                            rectángulo se define como la longitud del <strong class="text-azul-real">cateto 
+                            opuesto</strong> dividido por la <strong class="text-azul-real">hipotenusa</strong>.
+                        </p>
+                        <p>
+                            • El <strong class="text-azul-real">coseno</strong> de un ángulo es la longitud del 
+                            <strong class="text-azul-real">cateto adyacente</strong> dividido por la 
+                            <strong class="text-azul-real">hipotenusa</strong>.
+                        </p>
+                        <p>
+                            • La <strong class="text-azul-real">tangente</strong> de un ángulo es la razón entre 
+                            el <strong class="text-azul-real">seno</strong> y el <strong class="text-azul-real">
+                            coseno</strong> del ángulo.
+                        </p>
+                        <p>
+                            Además, existen funciones trigonométricas inversas como el 
+                            <strong class="text-azul-real">arcoseno, arcocoseno y arcotangente</strong>, que se 
+                            utilizan para encontrar ángulos dados ciertos valores de las funciones 
+                            trigonométricas.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(3)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Identidades trigonométricas</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov3">
+                    <div class="accordion-body text-justify">
+                        <p>
+                            Las identidades trigonométricas son ecuaciones que son verdaderas para todos los 
+                            valores de los ángulos en las cuales se aplican. Estas son fundamentales para 
+                            simplificar expresiones trigonométricas y resolver ecuaciones.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(4)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Identidades fundamentales</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov4">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button (click)="MostrarParrafo(5)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>Suma y diferencia</h3>
+                        </button>
+                    </h2>
+                    
+                    <div *ngIf="mostrarContenidov5">
+                        <div class="accordion-body text-justify">
+                            <p> 
+                                Estas identidades relacionan las funciones trigonométricas de la suma y diferencia 
+                                de dos ángulos. Por ejemplo:
+                            </p>
+                            <p>
+                                sin(a ± b) = sin(a)cos(b) ± cos(a)sin(b)
+                            </p>
+                            <p>
+                                cos(a ± b) = cos(a)cos(b) ∓ sin(a)sin(b)
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2 class="accordion-header" id="headingOne">
+                        <button (click)="MostrarParrafo(6)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>Doble ángulo</h3>
+                        </button>
+                    </h2>
+                    
+                    <div *ngIf="mostrarContenidov6">
+                        <div class="accordion-body text-justify">
+                            <p>
+                                Estas identidades expresan las funciones trigonométricas del doble de un ángulo en 
+                                términos de las funciones originales. Por ejemplo:
+                            </p>
+                            <p>sin(2a) = 2sin(a)cos(a)</p>
+                            <p>cos(2a) = cos2</p>
+                            <p>(a) − sin2</p>
+                            <p>(a)</p>
+                        </div>
+                    </div>
+
+                    <h2 class="accordion-header" id="headingOne">
+                        <button (click)="MostrarParrafo(7)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>Mitad de Ángulo</h3>
+                        </button>
+                    </h2>
+                    
+                    <div *ngIf="mostrarContenidov7">
+                        <div class="accordion-body text-justify">
+                            <p>
+                                Estas identidades relacionan las funciones trigonométricas del ángulo mitad en 
+                                términos de las funciones originales. Por ejemplo:
+                            </p>
+                            <p>sin(a2) = ± √1 − cos (a) 2</p>
+                            <p>cos(a2) = ± √1 + cos (a) 2</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(8)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Aplicaciones de las Identidades Trigonométricas</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov8">
+                    <div class="accordion-body text-justify">
+                        <p>
+                            Las identidades trigonométricas se utilizan extensamente en la simplificación de 
+                            expresiones trigonométricas complicadas. Por ejemplo, para simplificar una expresión 
+                            como:
+                        </p>
+                        <p>sin2(x) + cos2(x)</p>
+                        <p>utilizando la identidad fundamental:</p>
+                        <p>sin2(x) + cos2(x) = 1</p>
+                        <p>
+                            También son esenciales en la resolución de ecuaciones trigonométricas. Por ejemplo, 
+                            para resolver la ecuación:
+                        </p>
+                        <p>sin2(x) + cos2(x)</p>
+                        <p>
+                            se puede dividir ambos lados por cos(x) (si cos (x) ≠ 0) y utilizar las identidades 
+                            para simplificar y encontrar las soluciones.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(9)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Ecuaciones trigonométricas</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov9">
+                    <div class="accordion-body text-justify">
+                        <p>
+                            Las ecuaciones trigonométricas son ecuaciones que involucran funciones 
+                            trigonométricas de una variable. Existen métodos específicos para resolver estas
+                            ecuaciones, tanto simples como compuestas.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(10)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Métodos para resolver ecuaciones trigonométricas simples</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov10">
+                    <div class="accordion-body text-justify">
+                        <p>
+                            Para ecuaciones trigonométricas simples como sin(x) = 0 o cos (x) = 1, se pueden
+                            aplicar las funciones trigonométricas inversas para encontrar soluciones específicas
+                            en un intervalo dado.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(11)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Métodos para resolver ecuaciones trigonométricas compuestas</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov11">
+                    <div class="accordion-body text-justify">
+                        <p>
+                            Las ecuaciones trigonométricas compuestas son aquellas que involucran combinaciones
+                            de funciones trigonométricas, como sin(2x) = cos(x). Estas a menudo requieren la 
+                            aplicación de identidades trigonométricas para simplificar la ecuación antes de 
+                            resolverla.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>

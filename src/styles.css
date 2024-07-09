@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    /*background-color: #c; /* Este es un color gris claro */
+    /*background-color: #9FA8DA;*/
+    background-color: #5C6BC0;
+}

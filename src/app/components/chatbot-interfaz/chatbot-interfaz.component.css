@@ -1,0 +1,63 @@
+.chat-container{
+    width: 300px;
+    height: 435px;
+    position: fixed;
+    right: 0.5rem;
+    bottom: 3.4rem;
+    background-color: #1c45dd;
+}
+
+.chat-input{
+    width: 280px;
+    top: 0.5rem;
+    bottom: 0.5rem;
+}
+
+.chat-enviado{
+    display: block;
+    float: right;
+    background-color: #7f8287;
+    color: white;
+    min-width: 50.01%;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.chat-recivido{
+    display: block;
+    float: left;
+    background-color: #d97e33;
+    color: white;
+    min-width: 50.01%;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.block-blue{
+    width: 300px;
+    height: 65px;
+    position: fixed;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    display: flex; 
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.boton-close{
+    display: block;
+    width: 100%;
+}
+
+.boton-open{
+    width: 150px;
+    font-size: 14px;
+    border-radius: 100px;
+    position: fixed;
+    right: 0.5rem;
+    bottom: 3.4rem;
+}
+
+.chat-posicion{
+    position: absolute;
+}

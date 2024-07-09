@@ -1,0 +1,141 @@
+<!--haz el mismo texto resaltando las palabras claves-->
+<div class="list-group mt-3 mb-3">
+    <a class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between text-light">
+            <h2 class="mb-1 text-center">Criterios de Divisibilidad</h2>
+            <small class="text-center">
+                <p>Burton, D. M. (2010). Elementary number theory (7th ed.). McGraw-Hill.</p>
+            </small>
+        </div>
+
+        <div class="accordion mt-3">
+            <div class="contenedor">
+                <app-chatbot-interfaz></app-chatbot-interfaz>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                <button (click)="MostrarParrafo(1)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <h3>¿Qué es un criterio de divisibilidad?</h3>
+                </button>
+                </h2>
+
+                <div *ngIf="mostrarContenido">
+                    <div class="accordion-body text-justify text-light">
+                        Un <strong class="text-warning">criterio de divisibilidad</strong> es una regla que 
+                        permite determinar si un <strong class="text-warning">número entero</strong> es 
+                        divisible por otro número entero (llamado <strong class="text-warning">divisor</strong>) 
+                        sin realizar la división completa. Estas reglas se basan en <strong class="text-warning">
+                        propiedades aritméticas</strong> y pueden simplificar muchos cálculos.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item ">
+                <h2 class="accordion-header" id="headingOne">
+                <button (click)="MostrarParrafo(2)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <h3>Teorema Fundamental de la Aritmética</h3>
+                </button>
+                </h2>
+
+                <div *ngIf="mostrarContenidov2">
+                    <div class="accordion-body text-justify text-light">
+                        <p>
+                            Todo <strong class="text-warning">número entero</strong> mayor que 1 puede 
+                            <strong class="text-warning">descomponerse</strong> de manera única (excepto por el 
+                            orden de los factores) en un <strong class="text-warning">producto de números primos
+                            </strong>. Esto es la base de muchos <strong class="text-warning">criterios de 
+                            divisibilidad</strong>, ya que estos se derivan de las propiedades de los números 
+                            primos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item ">
+                <h2 class="accordion-header" id="headingOne">
+                <button (click)="MostrarParrafo(3)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <h3>Función de la Suma de los Dígitos</h3>
+                </button>
+                </h2>
+
+                <div *ngIf="mostrarContenidov3">
+                    <div class="accordion-body text-justify text-light">
+                        <p>
+                            Una propiedad importante para los criterios de <strong class="text-warning">
+                            divisibilidad por 3 y 9</strong> es que un número es divisible por 3 o 9 si y solo 
+                            si la suma de sus dígitos es divisible por 3 o 9, respectivamente.
+                        </p>
+                        <p>
+                            Esto se debe a que 10 ≡ 1 (mod 9) y 10 ≡ 1 (mod 3), y  cualquier número puede 
+                            expresarse como una <strong class="text-warning">suma de potencias de 10</strong>.
+                        </p>
+                        <p>
+                            <strong class="text-warning">Método de Restar el Doble del Último Dígito (para 
+                            divisibilidad por 7)</strong> Para determinar si un número es divisible por 7, se puede tomar el último dígito, 
+                            multiplicarlo por 2, y restarlo del número restante. 
+                        </p>
+                        <p>
+                            Si el resultado es divisible por 7, entonces el número original también lo es.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="accordion-item ">
+                <h2 class="accordion-header" id="headingOne">
+                <button (click)="MostrarParrafo(4)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <h3>Criterios de Divisibilidad</h3>
+                </button>
+                </h2>
+
+                <div *ngIf="mostrarContenidov4">
+                    <div class="accordion-body text-justify text-light">
+                        <p>
+                            <strong class="text-warning">• Divisibilidad por 2</strong>: Un número es divisible 
+                            por 2 si su último dígito es par.
+                        </p>
+                        <p>
+                            <strong class="text-warning">• Divisibilidad por 3</strong>: Un número es divisible 
+                            por 3 si la suma de sus dígitos es divisible por 3.
+                        </p>
+                        <p>
+                            <strong class="text-warning">• Divisibilidad por 4</strong>: Un número es divisible 
+                            por 4 si los dos últimos dígitos forman un número divisible por 4.
+                        </p>
+                        <p>
+                            <strong class="text-warning">• Divisibilidad por 5</strong>: Un número es divisible 
+                            por 5 si termina en 0 o 5.
+                        </p>
+                        <p>
+                            <strong class="text-warning">• Divisibilidad por 6</strong>: Un número es divisible 
+                            por 6 si es divisible tanto por 2 como por 3.
+                        </p>
+                        <p>
+                            <strong class="text-warning">• Divisibilidad por 7</strong>: Un número es divisible 
+                            por 7 si, al restar el doble del último dígito del resto del número, el resultado es 
+                            divisible por 7.
+                        </p>
+                        <p>
+                            <strong class="text-warning">• Divisibilidad por 8</strong>: Un número es divisible 
+                            por 8 si sus tres últimos dígitos forman un número divisible por 8.
+                        </p>
+                        <p>
+                            <strong class="text-warning">• Divisibilidad por 9</strong>: Un número es divisible 
+                            por 9 si la suma de sus dígitos es divisible por 9.
+                        </p>
+                        <p>
+                            <strong class="text-warning">• Divisibilidad por 10</strong>: Un número es divisible 
+                            por 10 si termina en 0.
+                        </p>
+                        <p>
+                            <strong class="text-warning">• Divisibilidad por 11</strong>: Un número es divisible
+                            por 11 si la diferencia entre la suma de los dígitos en las posiciones impares y la 
+                            suma de los dígitos en las posiciones pares es múltiplo de 11.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>

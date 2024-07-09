@@ -1,0 +1,173 @@
+<div class="list-group mt-3 mb-3">
+    <a class="list-group-item list-group-item-info list-group-item-action flex-column align-items-start active">
+        <div class="d-flex w-100 justify-content-between">
+            <h2 class="mb-1 text-center">Geometría</h2>
+            <small class="text-center">
+                <p>López Escudero, O. L. (2008). La enseñanza de la geometría. México: INEE.</p> 
+                <p>ISBN: 978-968-5924-35-1</p>
+            </small>
+        </div>
+
+        <div class="accordion">
+            <div class="contenedor">
+                <app-chatbot-interfaz></app-chatbot-interfaz>
+            </div>
+            <div class="accordion-item bg-info text-dark">
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(1)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Definición</h3>
+                    </button>
+                </h2>
+
+                <div *ngIf="mostrarContenido">
+                    <div class="accordion-body text-justify">
+                        <p>
+                            La <strong class="text-amarillo-dorado">geometría</strong> es una rama 
+                            <strong class="text-amarillo-dorado">antigua</strong> de las 
+                            <strong class="text-amarillo-dorado">matemáticas</strong> que se dedica al estudio 
+                            de las <strong class="text-amarillo-dorado">formas, las relaciones y las propiedades
+                            del espacio</strong>. Su nombre proviene del griego: “geo” significa “tierra” y 
+                            “metría” se refiere a “medición”. 
+                        </p>
+                        <p>
+                            Originalmente, la geometría se centraba en la <strong class="text-amarillo-dorado">
+                            medición práctica</strong>, pero con el tiempo, se comprendió que incluso las <strong 
+                            class="text-amarillo-dorado">abstracciones</strong> y representaciones más complejas 
+                            pueden expresarse en términos geométricos. 
+                        </p>
+                        <p>
+                            Esta disciplina ha dado origen a numerosas ramas y ha influido en áreas como 
+                            <strong class="text-amarillo-dorado">el dibujo técnico, la arquitectura, la física, 
+                            la mecánica y la astronomía</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(2)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Aplicaciones de geometría</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov2">
+                    <div class="accordion-body text-justify">
+                        <p>
+                            Se aplica en la <strong class="text-amarillo-dorado">realidad</strong> (en la vida 
+                            cotidiana, la arquitectura, la pintura, la escultura, la astronomía, los deportes, 
+                            la carpintería, la herrería, etcétera). Se usa en el <strong 
+                            class="text-amarillo-dorado">lenguaje cotidiano</strong> (por ejemplo, se dice: 
+                            calles paralelas, tinacos cilíndricos, la escalera en espiral, etcétera). 
+                        </p>
+                        <p>
+                            Sirve en el <strong class="text-amarillo-dorado">estudio de otros temas de las 
+                            matemáticas</strong> (por ejemplo, un modelo geométrico de la multiplicación de 
+                            números o expresiones algebraicas lo constituye el cálculo del área de rectángulos). 
+                        </p>
+                        <p>
+                            Permite desarrollar en los alumnos su <strong class="text-amarillo-dorado">
+                            percepción del espacio</strong>, su <strong class="text-amarillo-dorado">capacidad 
+                            de visualización y abstracción</strong>, su <strong class="text-amarillo-dorado">
+                            habilidad para elaborar conjeturas</strong> acerca de las relaciones geométricas en 
+                            una figura o entre varias y su <strong class="text-amarillo-dorado">habilidad para 
+                            argumentar</strong> al tratar de validar las conjeturas que hace.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(3)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>¿Cuál es la importancia de aprender geometría?</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov3">
+                    <div class="accordion-body text-justify">
+                        <p>
+                            Para <strong class="text-amarillo-dorado">conocer</strong> una rama de las 
+                            <strong class="text-amarillo-dorado">matemáticas</strong> más instructivas, 
+                            cultivar <strong class="text-amarillo-dorado">cultivar la inteligencia, desarrollar 
+                            estrategias de pensamiento, descubrir</strong> las propias <strong 
+                            class="text-amarillo-dorado">posibilidades creativas, aprender</strong>, aprender 
+                            una materia interesante y útil, fomentar una <strong class="text-amarillo-dorado">
+                            sensibilidad hacia lo bello, trabajar Matemáticas experimentalmente, agudizar la 
+                            visión del mundo que nos rodea, gozar de sus aplicaciones prácticas, 
+                            disfrutar</strong> aprendiendo y enseñando.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(4)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Metodos para aprender geometria</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov4">
+
+                    <h2 class="accordion-header" id="headingOne">
+                        <button (click)="MostrarParrafo(5)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>Conceptualización</h3>
+                        </button>
+                    </h2>
+                    
+                    <div *ngIf="mostrarContenidov5">
+                        <div class="accordion-body text-justify">
+                            <p>
+                                Se enfoca en la construcción de conceptos y relaciones geométricas, evitando la enseñanza puramente 
+                                definitoria y promoviendo una comprensión más rica y variada de las figuras geométricas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2 class="accordion-header" id="headingOne">
+                        <button (click)="MostrarParrafo(6)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>Demostración</h3>
+                        </button>
+                    </h2>
+                    
+                    <div *ngIf="mostrarContenidov6">
+                        <div class="accordion-body text-justify">
+                            <p>
+                                Estas tareas permiten a los estudiantes desarrollar su razonamiento geométrico a 
+                                través de la exploración y argumentación lógica, más allá de la simple 
+                                memorización de propiedades y teoremas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2 class="accordion-header" id="headingOne">
+                        <button (click)="MostrarParrafo(7)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>Enriquecimiento Visual</h3>
+                        </button>
+                    </h2>
+                    
+                    <div *ngIf="mostrarContenidov7">
+                        <div class="accordion-body text-justify">
+                            <p>
+                                Se destaca la importancia de enriquecer la imagen conceptual de los objetos 
+                                geométricos mediante la variación de representaciones y la ampliación del 
+                                concepto mismo, como en el caso de la mediatriz.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2 class="accordion-header" id="headingOne">
+                        <button (click)="MostrarParrafo(8)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>Aplicaciones prácticas</h3>
+                        </button>
+                    </h2>
+                    
+                    <div *ngIf="mostrarContenidov8">
+                        <div class="accordion-body text-justify">
+                            <p>
+                                Se sugiere que la enseñanza de la geometría debe estar ligada a aplicaciones 
+                                prácticas y al entorno del estudiante, para fomentar una comprensión más profunda 
+                                y significativa de la materia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>

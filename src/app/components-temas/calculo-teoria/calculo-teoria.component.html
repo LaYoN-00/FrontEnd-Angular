@@ -1,0 +1,197 @@
+<div class="list-group mt-3 mb-3">
+    <a class="list-group-item list-group-item-light list-group-item-action flex-column align-items-start active">
+        <div class="d-flex w-100 justify-content-between">
+            <h2 class="mb-1 text-center">Calculo</h2>
+            <small class="text-center">
+                <p>Fuente: Garza Olvera B., Calculo diferencial, (Segunda Edición), Editorial Person.</p>
+            </small>
+        </div>
+
+        <div class="accordion">
+            <div class="contenedor">
+                <app-chatbot-interfaz></app-chatbot-interfaz>
+            </div>
+            <div class="accordion-item bg-light text-dark">
+                <h2 class="accordion-header" id="headingOne">
+                <button (click)="MostrarParrafo(1)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <h3>Definición de cálculo de integrales</h3>
+                </button>
+                </h2>
+
+                <div *ngIf="mostrarContenido">
+                    <div class="accordion-body text-justify">
+                        <p>
+                            El <strong class="text-info">cálculo integral</strong> es una rama de las matemáticas 
+                            que estudia la <strong class="text-info">integración de funciones</strong>. En otras 
+                            palabras, se ocupa del cálculo de <strong class="text-info">áreas, volúmenes y 
+                            longitudes</strong>.
+                        </p>
+                        <p>
+                            Esta disciplina matemática se utiliza para resolver problemas relacionados con 
+                            <strong class="text-info">física, ingeniería y economía</strong>. Además, 
+                            proporciona herramientas para la solución de <strong class="text-info">ecuaciones 
+                            diferenciales</strong> y tiene aplicaciones en todas las <strong class="text-info">
+                            áreas de la ciencia</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(2)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Ejemplos de cálculo integral</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov2">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button (click)="MostrarParrafo(3)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>Cálculo de Áreas.</h3>
+                        </button>
+                    </h2>
+                    
+                    <div *ngIf="mostrarContenidov3">
+                        <div class="accordion-body text-justify">
+                            <p>
+                                El <strong class="text-info">cálculo integral</strong> se utiliza para encontrar 
+                                <strong class="text-info">áreas bajo curvas</strong>. Por ejemplo, puedes 
+                                calcular el área de un <strong class="text-info">terreno irregular</strong> o la 
+                                <strong class="text-info">región encerrada entre dos funciones</strong>. Si 
+                                tienes una función (f(x)) y deseas encontrar el área bajo su curva entre los 
+                                puntos (a)y(b)
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2 class="accordion-header" id="headingOne">
+                        <button (click)="MostrarParrafo(4)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>Velocidad y aceleración</h3>
+                        </button>
+                    </h2>
+                    
+                    <div *ngIf="mostrarContenidov4">
+                        <div class="accordion-body text-justify">
+                            <p>
+                                En física, el cálculo integral se aplica para calcular la velocidad y aceleración de 
+                                objetos en movimiento. Si tienes una función que describe la velocidad (v(t)), puedes 
+                                encontrar la posición utilizando la integral: ( \int_[a]^[b] f(x) \, dx \)
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2 class="accordion-header" id="headingOne">
+                        <button (click)="MostrarParrafo(5)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>Cálculo de volúmenes de sólidos</h3>
+                        </button>
+                    </h2>
+                    
+                    <div *ngIf="mostrarContenidov5">
+                        <div class="accordion-body text-justify">
+                            <p>
+                                Otra aplicación fascinante de las <strong class="text-info">integrales es el 
+                                cálculo de volúmenes de sólidos</strong>.
+                                Por ejemplo, puedes determinar el <strong class="text-info">volumen de un sólido 
+                                generado al girar una región acotada alrededor de un eje</strong>. Optimización 
+                                de Problemas. Las integrales también se utilizan para <strong class="text-info">
+                                optimizar problemas</strong>, como maximizar o minimizar 
+                                <strong class="text-info">áreas o volúmenes</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(6)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Definición de cálculo diferencial</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov6">
+                    <div class="accordion-body text-justify">
+                        <p>
+                            El <strong class="text-info">cálculo diferencial</strong> es una rama fascinante de 
+                            las matemáticas que se centra en el estudio de las <strong class="text-info">tasas 
+                            de cambio</strong> y cómo las <strong class="text-info">funciones varían de manera 
+                            instantánea en puntos específicos</strong>.
+                        </p>
+                        <p>
+                            Su enfoque principal es el <strong class="text-info">concepto de derivada</strong>, 
+                            que proporciona una medida precisa de la <strong class="text-info">velocidad con la 
+                            que una cantidad cambia en relación con otra</strong>. 
+                        </p>
+                        <p>
+                            En términos más simples, el cálculo diferencial nos permite comprender cómo se 
+                            comportan las funciones cuando se analiza su <strong class="text-info">cambio 
+                            infinitesimal en una variable</strong>. 
+                        </p>
+                        <p>
+                            Se convierte en una <strong class="text-info">herramienta invaluable en la 
+                            modelización y resolución de problemas del mundo real</strong>, desde la <strong 
+                            class="text-info">física y la economía hasta la biología</strong>. 
+                        </p>
+                        <p>
+                            La derivada, elemento fundamental del cálculo diferencial, nos ofrece una 
+                            <strong class="text-info">perspectiva instantánea sobre cómo evoluciona una función 
+                            en un punto específico</strong>.
+                        </p>
+                        <p>
+                            Además, la <strong class="text-info">interpretación geométrica de la derivada como 
+                            la pendiente de una recta tangente a una curva refleja la conexión profunda entre 
+                            el cálculo y la geometría</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(7)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Ejemplos de cálculo diferencial</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov7">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button (click)="MostrarParrafo(8)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>Función derivada</h3>
+                        </button>
+                    </h2>
+                    
+                    <div *ngIf="mostrarContenidov8">
+                        <div class="accordion-body text-justify">
+                            <p>
+                                La derivada de una función mide cómo cambia la función en un punto específico. Se 
+                                denota como f′(x) o dxdf por ejemplo, si tenemos la función f(x)=3x2+2x, su 
+                                derivada es f′(x)=6x+2.
+                            </p>
+                            <p>Derivadas de Funciones Comunes.</p>
+                            <p>
+                                Derivada de una constante.: si f(x)=c (donde c es una constante), su derivada es 
+                                f′(x)=0
+                            </p>
+                            <p>Derivada de una función lineal: si f(x)=mx+b, su derivada es f′(x)=m</p>
+                            <p>Derivada de una función exponencial: si f(x)=ex, su derivada es f′(x)=ex</p>
+                            <p>
+                                Derivada de una función trigonométrica. Por ejemplo, la derivada de sin(x) es 
+                                cos(x)
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2 class="accordion-header" id="headingOne">
+                        <button (click)="MostrarParrafo(9)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>Optimización</h3>
+                        </button>
+                    </h2>
+                    
+                    <div *ngIf="mostrarContenidov9">
+                        <div class="accordion-body text-justify">
+                            <p>
+                                El cálculo diferencial también se utiliza para resolver problemas de 
+                                optimización. Por ejemplo, encontrar el máximo o mínimo de una función dada 
+                                ciertas restricciones.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>

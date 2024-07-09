@@ -1,0 +1,112 @@
+<div class="list-group mt-3 mb-3">
+    <a class="list-group-item list-group-item-danger list-group-item-action flex-column align-items-start active">
+        <div class="d-flex w-100 justify-content-between mb-3">
+            <h2 class="mb-1 text-center">Funciones</h2>
+            <small class="text-center">
+                <p>Garza Olvera, B., Geometría analítica, Editorial Person.</p>
+            </small>
+        </div>
+
+        <div class="accordion">
+            <div class="contenedor">
+                <app-chatbot-interfaz></app-chatbot-interfaz>
+            </div>
+            <div class="accordion-item bg-danger text-light">
+                <h2 class="accordion-header" id="headingOne">
+                <button (click)="MostrarParrafo(1)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <h3>Funciones en plano cartesiano</h3>
+                </button>
+                </h2>
+
+                <div *ngIf="mostrarContenido">
+                    <div class="accordion-body text-justify">
+                        <p>
+                            Las funciones se representan como (f(x) = y). Por ejemplo, la función lineal (f(x) = 3x) asigna
+                            a cada valor de (x) un valor correspondiente de (y).
+                        </p>
+                    </div>
+
+                    <h2 class="accordion-header" id="headingOne">
+                        <button (click)="MostrarParrafo(2)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>Usos y Aplicaciones</h3>
+                        </button>
+                    </h2>
+                    
+                    <div *ngIf="mostrarContenidov2">
+                        <div class="accordion-body text-justify">
+                            <P>● Determinar la posición de puntos en el plano.</P>
+                            <p>● Representar gráficamente funciones matemáticas.</p>
+                            <p>● Resolver problemas geométricos y analíticos.</p>
+                            <p>● Ejemplos de funciones en plano cartesiano.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(3)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Función Lineal</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov3">
+                    <div class="accordion-body text-justify">
+                        <p>
+                            La función lineal más simple es (f(x) = mx + b), donde (m) es la pendiente y (b) es 
+                            la ordenada al origen. Por ejemplo, si tenemos (f(x) = 2x + 3), la pendiente es 2 y 
+                            la ordenada al origen es 3. 
+                        </p>
+                        <p>
+                            Graficamos la función como una línea recta que pasa por el punto (0, 3) con una 
+                            pendiente de 2.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(4)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Función Cuadrática</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov4">
+                    <div class="accordion-body text-justify">
+                        <p>
+                            Una función cuadrática tiene la forma (f(x) = ax^2 + bx + c), donde (a), (b) y (c) 
+                            son constantes. Por ejemplo, si tenemos (f(x) = x^2 - 4x + 4), la gráfica es una 
+                            parábola con vértice en el punto (2, 0).
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(5)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Función Exponencial</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov5">
+                    <div class="accordion-body text-justify">
+                        <p>
+                            La función exponencial es de la forma (f(x) = a^x), donde (a) es la base. Si tomamos 
+                            (f(x) = 2^x), la gráfica es una curva que crece exponencialmente.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(6)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Función logarítmica</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov6">
+                    <div class="accordion-body text-justify">
+                        La función logarítmica es de la forma (f(x) = \log_a(x)), donde (a) es la base del 
+                        logaritmo. Por ejemplo, (f(x) = \log_2(x)) tiene una gráfica que crece lentamente y se 
+                        acerca al eje (x).
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>

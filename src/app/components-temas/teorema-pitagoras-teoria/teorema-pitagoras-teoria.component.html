@@ -1,0 +1,127 @@
+<div class="list-group mt-3 mb-3">
+    <a class="list-group-item list-group-item-secondary list-group-item-action flex-column align-items-start active">
+        <div class="d-flex w-100 justify-content-between">
+            <h2 class="mb-1 text-center">Teorema de Pitágoras</h2>
+            <small class="text-center">
+                <p>Alexander, D. C., & Koeberlein, G. M. (2015). Elementary Geometry for College</p>
+                <p>Students (6th ed.). Cengage Learning.</p>
+            </small>
+        </div>
+
+        <div class="accordion">
+            <div class="contenedor">
+                <app-chatbot-interfaz></app-chatbot-interfaz>
+            </div>
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                <button (click)="MostrarParrafo(1)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <h3>¿Qué es el teorema de Pitagoras?</h3>
+                </button>
+                </h2>
+
+                <div *ngIf="mostrarContenido">
+                    <div class="accordion-body text-justify bg-secondary text-dark">
+                        <p>
+                            El <strong class="text-light">Teorema de Pitágoras</strong> es uno de los resultados 
+                            más importantes en <strong class="text-light">geometría euclidiana</strong>, 
+                            fundamental para entender las relaciones entre los lados de un triángulo rectángulo. 
+                        </p>
+                        <p>
+                            En un <strong class="text-light">triángulo rectángulo</strong>, que tiene un ángulo 
+                            recto (90 grados), el teorema establece que: c2 = a2 + b2 = c = √a2 + b2
+                        </p>
+                        <p>
+                            Donde:
+                        </p>
+                        <p>
+                            • c es la longitud de la <strong class="text-light">hipotenusa</strong>, el lado 
+                            opuesto al ángulo recto.
+                        </p>
+                        <p>
+                            • <strong class="text-light">a y b</strong> son las longitudes de los <strong 
+                            class="text-light">catetos</strong>, los lados que forman el ángulo recto. Este 
+                            teorema puede ser utilizado para encontrar la longitud de cualquiera de los lados de
+                            un triángulo rectángulo si se conocen los otros dos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                <button (click)="MostrarParrafo(2)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <h3>¿Cómo sacar la hipotenusa?</h3>
+                </button>
+                </h2>
+
+                <div *ngIf="mostrarContenidov2">
+                    <div class="accordion-body text-justify bg-secondary text-dark">
+                        <p>
+                            Para calcular la <strong class="text-light">hipotenusa c</strong> de un <strong 
+                            class="text-light">triángulo rectángulo</strong> cuando se conocen las longitudes de 
+                            ambos <strong class="text-light">catetos a y b</strong>, el procedimiento es el 
+                            siguiente:
+                        </p>
+                        <p>
+                            • <strong class="text-light">Identifica los valores dados</strong>:
+                            <strong class="text-light">a y b</strong> son las longitudes de los catetos 
+                            conocidos.
+                        </p>
+                        <p>
+                            • <strong class="text-light">Aplica el Teorema de Pitágoras</strong>:
+                            Utiliza la fórmula del teorema para calcular
+                            c = √a2 + b2
+                        </p>
+                        <p>
+                            • <strong class="text-light">Calcula el valor numérico</strong>: Sustituye los 
+                            valores conocidos de <strong class="text-light">a y b</strong> en la fórmula y 
+                            realiza las operaciones necesarias para obtener <strong class="text-light">c</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                <button (click)="MostrarParrafo(3)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <h3>¿Cómo sacar un cateto?</h3>
+                </button>
+                </h2>
+
+                <div *ngIf="mostrarContenidov3">
+                    <div class="accordion-body text-justify bg-secondary text-dark">
+                        <p>
+                            Para encontrar la longitud de uno de los catetos a o b en un triángulo rectángulo
+                            cuando se conoce la hipotenusa c y otro cateto, el procedimiento es:
+                        </p>
+                        <p>
+                            <strong class="text-light">Identifica los valores dados</strong>
+                        </p>
+                        <p>
+                            • <strong class="text-light">c</strong> es la longitud de la hipotenusa.
+                        </p>
+                        <p>
+                            • <strong class="text-light">hipotenusa</strong> es la longitud de un cateto conocido.
+                        </p>
+                        <p>
+                            <strong class="text-light">Aplica el Teorema de Pitágoras</strong>:
+                        </p>
+                        <p>
+                            • Despeja a o b en la fórmula del teorema: a2 = c2 − b2 o b2 = c2 − a2
+                        </p>
+                        <p>
+                            • Luego, toma la <strong class="text-light">raíz cuadrada</strong> para obtener 
+                            <strong class="text-light">a o b</strong>:  a = √c2 − b2 o b = √c2 − a2
+                        </p>
+                        <p>
+                            <strong class="text-light">Calcula el valor numérico</strong>: Sustituye los valores 
+                            conocidos de <strong class="text-light">c</strong> y el otro cateto en la fórmula y 
+                            realiza las operaciones necesarias para obtener <strong class="text-light">a o b</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>

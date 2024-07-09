@@ -1,0 +1,118 @@
+<div class="list-group mt-3 mb-3">
+    <a class="list-group-item list-group-item-action flex-column align-items-start active">
+        <div class="d-flex w-100 justify-content-between">
+            <h2 class="mb-1 text-center">Números Primos</h2>
+            <small class="text-center">
+                <p>Fuente: Gracián, E. (s. f.). Los Números Primos: Un largo camino al infinito.</p>
+                <p>Colaboración de Sergio Barros y Preparado por Patricio Barros.</p>
+            </small>
+        </div>
+
+        <div class="accordion">
+            <div class="contenedor">
+                <app-chatbot-interfaz></app-chatbot-interfaz>
+            </div>
+            <div class="accordion-item ">
+                <h2 class="accordion-header bg-active" id="headingOne">
+                <button (click)="MostrarParrafo(1)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <h3>¿Qué es un número primo?</h3>
+                </button>
+                </h2>
+
+                <div *ngIf="mostrarContenido">
+                    <div class="accordion-body text-justify">
+                        Se dice que un número es primo cuando sólo es divisible por sí mismo y por la unidad.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item ">
+                <h2 class="accordion-header" id="headingOne">
+                <button (click)="MostrarParrafo(2)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <h3>¿Comó se descubre un número primo?</h3>
+                </button>
+                </h2>
+
+                <div *ngIf="mostrarContenidov2">
+                    <div class="accordion-body text-justify">
+                        <p>
+                            Para hacer una <strong class="text-warning">descomposición en factores</strong> primos, el método que 
+                            hay que seguir consiste en colocar el número en cuestión a la izquierda de una línea vertical. Se tantea 
+                            entonces si el número es <strong class="text-warning">divisible por 2, 3, 5</strong> etc.
+                        </p>
+                        <p>
+                            Es decir, por <strong class="text-warning">números primos</strong> empezando por el más pequeño. En el caso de que sea divisible, se coloca el 
+                            resultado de la división en la parte de la izquierda y se empieza de nuevo con este número. 
+                        </p>
+                        <p>
+                            Se sigue el proceso hasta que el número de la izquierda es <strong class="text-warning">unidad</strong>. En la columna 
+                            de la derecha aparecen entonces los números primos que factorizan al número dado.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item ">
+                <h2 class="accordion-header" id="headingOne">
+                <button (click)="MostrarParrafo(3)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <h3>La criba de Eratóstenes</h3>
+                </button>
+                </h2>
+
+                <div *ngIf="mostrarContenidov3">
+                    <div class="accordion-body text-justify">
+                        <p>
+                            Uno de los primeros métodos conocidos para tal cometido se atribuye a <strong class="text-warning">
+                            Eratóstenes de Cirene</strong> (273-194 a. C.), matemático, astrónomo y geógrafo griego que fue director de 
+                            la biblioteca de Alejandría. 
+                        </p>
+                        <p>
+                            Dicho método se conoce como la <strong class="text-warning">"criba de Eratóstenes”. Demostración del teorema 
+                            fundamental de la aritmética</strong> establece que todo número natural diferente de 1 se puede expresar de 
+                            manera única como un producto de factores primos. Para demostrarlo, se procede en dos pasos
+                        </p>
+                    </div>
+
+                    <button (click)="MostrarParrafo(4)" class="accordion-button collapsed bg-active" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h4>Existencia de la descomposición</h4>
+                    </button>
+                    <div *ngIf="mostrarContenidov3_1">
+                        <div class="accordion-body text-justify">
+                            <p>
+                                Supongamos que existe un número, denotado como “n”, que no puede descomponerse en 
+                                <strong class="text-warning">factores primos</strong>. Dado que hemos excluido el número 1 como 
+                                primo, n no puede ser igual a 1.
+                            </p>
+                            <p>
+                                Si n no es primo, debe ser un número <strong class="text-warning">compuesto</strong>, es decir, 
+                                n = a × b, donde a y b son menores que n. Sin embargo, dado que n era el número más pequeño 
+                                que no se podía descomponer en factores primos, a y b deben ser descomponibles en factores primos.
+                            </p>
+                            <p>
+                                Por lo tanto, n también debe serlo, lo que lleva a una <strong class="text-warning">contradicción</strong>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button (click)="MostrarParrafo(5)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h4>Unicidad de la descomposición:</h4>
+                    </button>
+                    <div *ngIf="mostrarContenidov3_2">
+                        <div class="accordion-body text-justify">
+                            <p>
+                                Supongamos que un número natural mayor que 1 se puede descomponer de dos maneras diferentes en 
+                                <strong class="text-warning">factores primos</strong>. Tomemos un número primo “p” de la primera
+                                descomposición. Este número debe dividir la segunda descomposición y, por lo tanto, a alguno de sus 
+                                factores. 
+                            </p>
+                            <p>
+                                Como p es primo, debe ser igual a uno de los factores. Repitiendo este proceso con otros 
+                                números primos, encontramos que los factores primos en ambas descomposiciones son los mismos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>

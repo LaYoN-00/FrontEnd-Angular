@@ -1,0 +1,8 @@
+.text-rojo-oxido{
+    color: #AA351E;
+}
+
+.contenedor{
+    position: relative;
+    z-index: 2;
+}

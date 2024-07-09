@@ -1,0 +1,355 @@
+<div class="list-group mt-3 mb-3">
+    <a class="list-group-item list-group-item-success list-group-item-action flex-column align-items-start active">
+        <div class="d-flex w-100 justify-content-between mb-3">
+            <h2 class="mb-1 text-center">Álgebra</h2>
+            <small class="text-center">
+                <p>Meana, M. G. (s. f.). Matemática Iniciación al Álgebra.</p>
+            </small>
+        </div>
+
+        <div class="accordion">
+            <div class="contenedor">
+                <app-chatbot-interfaz></app-chatbot-interfaz>
+            </div>
+            <div class="accordion-item bg-success text-dark">
+                <h2 class="accordion-header" id="headingOne">
+                <button (click)="MostrarParrafo(1)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <h3>Definición</h3>
+                </button>
+                </h2>
+
+                <div *ngIf="mostrarContenido">
+                    <div class="accordion-body text-justify">
+                        <p>
+                            En <strong class="text-rojo-oxido">matemáticas</strong> se emplean diversos lenguajes, 
+                            como el <strong class="text-rojo-oxido">lenguaje simbólico</strong> y el de los 
+                            <strong class="text-rojo-oxido">códigos</strong>, para comunicar <strong 
+                            class="text-rojo-oxido">conceptos</strong> y resolver <strong class="text-rojo-oxido">
+                            problemas</strong>. Estos <strong class="text-rojo-oxido">lenguajes</strong> son 
+                            fundamentales para expresar <strong class="text-rojo-oxido">ideas matemáticas                                
+                            </strong> de manera <strong class="text-rojo-oxido">precisa y efectiva</strong>.
+                            Estos son algunos de ellos:
+                        </p>
+
+                        <div>
+                            <h2 class="accordion-header" id="headingOne">
+                                <button (click)="MostrarParrafo(2)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    <h3>Lenguaje coloquial</h3>
+                                </button>
+                            </h2>
+                            
+                            <div *ngIf="mostrarContenidov2">
+                                <div class="accordion-body text-justify">
+                                    <p>
+                                        Utilizamos palabras cotidianas para expresar ideas matemáticas. Por ejemplo:
+                                    </p>
+                                    <p>
+                                        • “El doble de un número es igual a ocho.”
+                                    </p>
+                                    <p>
+                                        • “La suma de dos números es igual a veinte.”
+                                    </p>
+                                    <p>
+                                        • “La suma de dos números es igual a veinte.”
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h2 class="accordion-header" id="headingOne">
+                                <button (click)="MostrarParrafo(3)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    <h3>Lenguaje simbólico o algebraico</h3>
+                                </button>
+                            </h2>
+                            
+                            <div *ngIf="mostrarContenidov3">
+                                <div class="accordion-body text-justify">
+                                    <p>
+                                        Este lenguaje utiliza símbolos específicos para representar 
+                                        conceptos matemáticos. Las expresiones anteriores se traducirían así:
+                                    </p>
+                                    <p>• “7h = 3”</p>
+                                    <p>• “E = D + 6”</p>
+                                    <p>• “C = e + 2.610d”</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h2 class="accordion-header" id="headingOne">
+                                <button (click)="MostrarParrafo(4)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    <h3>Lenguaje gráfico</h3>
+                                </button>
+                            </h2>
+                            
+                            <div *ngIf="mostrarContenidov4">
+                                <div class="accordion-body text-justify">
+                                    <p>
+                                        Se utiliza para presentar información de manera concisa. Algunos ejemplos son:
+                                    </p>
+                                    <p>• “Gráficos circulares”</p>
+                                    <p>• “Gráficos de barras”</p>
+                                    <p>• “Representaciones en ejes cartesianos”</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(5)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Introducción de lenguaje algebraico</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov5">
+                    <div class="accordion-body text-justify">
+                        <p>
+                            Las expresiones algebraicas son aquellas en las que se combinan números y letras 
+                            (variables). Estas letras pueden sustituirse por diferentes valores numéricos. Algunos 
+                            ejemplos de expresiones algebraicas son:
+                        </p>
+                        <p>• 3b+2c+4d</p>
+                        <p>• x2=9</p>
+                        <p>• 5x</p>
+                        <p>• a2+b2</p>
+                        <p>• 2x=8</p>
+                        <p>• 2(x+1)=4x</p>
+                        <p>• 3x+2y=5</p>
+                        <p>• S=2b⋅h</p>
+                        <p>• 4=x+1</p>
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(6)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Términos en expresiones algebraicas</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov6">
+                    <div class="accordion-body text-justify">
+                        <p>
+                            Cada término de una expresión algebraica consta de una parte numérica y una parte 
+                            literal. Por ejemplo, en la expresión “5a2”, el 5 es la parte numérica y a2 es la 
+                            parte literal.
+                        </p>
+                        <p>
+                            Los términos que tienen la misma parte literal se llaman “términos 
+                            semejantes”. Por ejemplo, 5b es semejante a 2b, 3x2 es semejante a 2x2, y 4ab es 
+                            semejante a 6ab.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(7)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Suma y resta</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov7">
+                    <div class="accordion-body text-justify">
+                        Al sumar y restar expresiones algebraicas, solo se pueden combinar los términos semejantes.
+                        Ejemplos:
+                        • 3b + 2b = 5b
+                        • 2a + 3b − b + 4a = 6a − 2b
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(8)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Ecuaciones de Primer Grado</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov8">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button (click)="MostrarParrafo(9)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>Métodos de Resolución</h3>
+                        </button>
+                    </h2>
+                    
+                    <div *ngIf="mostrarContenidov9">
+                        <div class="accordion-body text-justify">
+                            Existen distintos métodos para resolver ecuaciones, como resolver mentalmente, por 
+                            tanteo o transformando en ecuaciones equivalentes.
+                        </div>
+                    </div>
+
+                    <h2 class="accordion-header" id="headingOne">
+                        <button (click)="MostrarParrafo(10)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>Ecuaciones Equivalentes</h3>
+                        </button>
+                    </h2>
+                    
+                    <div *ngIf="mostrarContenidov10">
+                        <div class="accordion-body text-justify">
+                            <p>
+                                Las ecuaciones que comparten el mismo conjunto solución se consideran 
+                                equivalentes. Por ejemplo, las ecuaciones que tienen como solución a ( x = 3 ) 
+                                son equivalentes.
+                            </p>
+                            <p>
+                                Variables y Soluciones: La asignación de letras a variables no altera la 
+                                solución del problema; las ecuaciones de primer grado con dos incógnitas pueden 
+                                tener múltiples soluciones.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2 class="accordion-header" id="headingOne">
+                        <button (click)="MostrarParrafo(11)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>Representación Gráfica</h3>
+                        </button>
+                    </h2>
+                    
+                    <div *ngIf="mostrarContenidov11">
+                        <div class="accordion-body text-justify">
+                            <p>
+                                Las soluciones de ecuaciones lineales se alinean en un gráfico cartesiano y la 
+                                intersección de rectas representa la solución gráfica del sistema.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2 class="accordion-header" id="headingOne">
+                        <button (click)="MostrarParrafo(12)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>Conjunto Solución</h3>
+                        </button>
+                    </h2>
+                    
+                    <div *ngIf="mostrarContenidov12">
+                        <div class="accordion-body text-justify">
+                            <p>
+                                El conjunto solución de un sistema de ecuaciones incluye todos los pares que 
+                                satisfacen todas las ecuaciones, pudiendo ser un único par, infinitos pares o 
+                                ninguno.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2 class="accordion-header" id="headingOne">
+                        <button (click)="MostrarParrafo(13)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>Tipos de Sistemas</h3>
+                        </button>
+                    </h2>
+                    
+                    <div *ngIf="mostrarContenidov13">
+                        <div class="accordion-body text-justify">
+                            <p>
+                                Los sistemas se clasifican como compatibles determinados (un punto), incompatibles (vacío)
+                                o compatibles indeterminados (infinitos puntos), y un sistema con más de dos ecuaciones 
+                                necesita que todas las rectas se intersecten en un punto para tener solución.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(14)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Operaciones numéricas</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov14">
+
+                    <h2 class="accordion-header" id="headingOne">
+                        <button (click)="MostrarParrafo(15)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>Valor Numérico</h3>
+                        </button>
+                    </h2>
+                    
+                    <div *ngIf="mostrarContenidov15">
+                        <div class="accordion-body text-justify">
+                            Resultado de reemplazar la variable por un número específico.
+                        </div>
+                    </div>
+
+                    <h2 class="accordion-header" id="headingOne">
+                        <button (click)="MostrarParrafo(16)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>Raíz o Cero</h3>
+                        </button>
+                    </h2>
+                    
+                    <div *ngIf="mostrarContenidov16">
+                        <div class="accordion-body text-justify">
+                            Valor de la variable que hace que el polinomio sea igual a cero.
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(17)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Operaciones con polinomios</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov17">
+
+                    <h2 class="accordion-header" id="headingOne">
+                        <button (click)="MostrarParrafo(18)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>Suma/Resta</h3>
+                        </button>
+                    </h2>
+                    
+                    <div *ngIf="mostrarContenidov18">
+                        <div class="accordion-body text-justify">
+                            El grado del resultado depende del grado de los polinomios y los coeficientes principales.
+                        </div>
+                    </div>
+
+                    <h2 class="accordion-header" id="headingOne">
+                        <button (click)="MostrarParrafo(19)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>Multiplicación</h3>
+                        </button>
+                    </h2>
+                    
+                    <div *ngIf="mostrarContenidov19">
+                        <div class="accordion-body text-justify">
+                            El grado del polinomio resultante es la suma de los grados de los polinomios multiplicados.
+                        </div>
+                    </div>
+
+                    <h2 class="accordion-header" id="headingOne">
+                        <button (click)="MostrarParrafo(20)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>División</h3>
+                        </button>
+                    </h2>
+                    
+                    <div *ngIf="mostrarContenidov20">
+                        <div class="accordion-body text-justify">
+                            Se obtienen dos polinomios, uno de ellos con grado menor que el divisor o igual a cero.
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(21)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Teorema del Resto</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov21">
+                    <div class="accordion-body text-justify">
+                        El resto de dividir un polinomio por ( x - a ) es el valor numérico para ( x = a ).
+                    </div>
+                </div>
+
+                <h2 class="accordion-header" id="headingOne">
+                    <button (click)="MostrarParrafo(22)" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <h3>Resolución de Raíces</h3>
+                    </button>
+                </h2>
+                
+                <div *ngIf="mostrarContenidov22">
+                    <div class="accordion-body text-justify">
+                        Polinomios de Grado 3 o Mayor Se hallan las raíces por tanteo y división sucesiva hasta 
+                        obtener un polinomio de grado 2, luego se aplica la fórmula cuadrática.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
