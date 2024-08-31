@@ -1,6 +1,6 @@
 .chat-container{
     width: 300px;
-    height: 435px;
+    height: 425px;
     position: fixed;
     right: 0.5rem;
     bottom: 3.4rem;
@@ -9,6 +9,7 @@
 
 .chat-input{
     width: 280px;
+    height: 20px;
     top: 0.5rem;
     bottom: 0.5rem;
 }
@@ -35,7 +36,7 @@
 
 .block-blue{
     width: 300px;
-    height: 65px;
+    height: 75px;
     position: fixed;
     right: 0.5rem;
     bottom: 0.5rem;
@@ -60,4 +61,16 @@
 
 .chat-posicion{
     position: absolute;
+}
+
+.incons{
+    position: absolute;
+    width: 250px;
+    height: 350px;
+    right: 1.5rem;
+    top: 3.0rem;
+}
+
+.mensajes{
+    position: relative;
 }

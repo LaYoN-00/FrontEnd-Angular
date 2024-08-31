@@ -1,0 +1,57 @@
+.contenedor{
+    margin: auto;
+    width: 95%;
+    font-family: 'math';
+    background-color: #86652b;
+}
+
+.fila-criterios{
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 5%;
+}
+
+.btn-criterios{
+    width: 100%;
+    background-color: #a54035;
+}
+
+.switch-criterios{
+    width: 50%;
+}
+
+.contenedor-text-area{
+    margin: auto;
+    width: 95%;
+}
+
+.text-criterios-divisibilidad{
+    text-align: center;
+    background-color: #a54035;
+    margin: auto;
+    width: 90%;
+}
+
+.container-opciones{
+    background-color: #a54035;
+    margin: auto;
+    width: 90%;
+}
+
+.form-style{
+    width: 90%;
+    margin: 0 auto;
+    background-color: #a54035;
+}
+
+.OpcionRespuesta{
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    color: #a54035;
+    font-size: large;
+}
+
+.input-criterios{
+    width: 100%;
+}

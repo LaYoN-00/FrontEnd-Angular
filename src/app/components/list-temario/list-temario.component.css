@@ -1,3 +1,19 @@
-.table-CDT {
-    background-color: #b44031;
+.container-list-temario{
+    width: 96%;
+    padding: 2%;
+    background-color: #453ad7;
+}
+
+.imagenes-card{
+    width: 90%;
+    height: 250px;
+    margin-left: 5%;
+}
+
+.bg-numeros-primos{
+    background-color: #9b34b1;
+}
+
+.bg-criterios-divisibilidad{
+    background-color: #893521;
 }

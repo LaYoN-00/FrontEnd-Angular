@@ -1,7 +1,25 @@
-.dropdown .dropdown-menu {
-    display: none;
+.titulo-navbar{
+    font-family: 'math';
+    font-size: large;
 }
-  
-.dropdown.show .dropdown-menu {
-    display: block;
+
+.navbar-toggler {
+    background-color: #015660;
+    padding: 0;
+}
+
+.btn-navbar{
+    display: flex;
+    width: 150px;
+    height: 30px;
+    bottom: 1.5rem;
+    top: 1.5rem;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;
+    border: none;
+}
+
+.dropdown-menu{
+    width: 150px;
+    font-family: 'math';
 }

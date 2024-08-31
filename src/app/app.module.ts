@@ -23,6 +23,19 @@ import { GeometriaTeoriaComponent } from './components-temas/geometria-teoria/ge
 import { CriteriosDivisibilidadTeoriaComponent } from './components-temas/criterios-divisibilidad-teoria/criterios-divisibilidad-teoria.component';
 import { TeoremaPitagorasTeoriaComponent } from './components-temas/teorema-pitagoras-teoria/teorema-pitagoras-teoria.component';
 import { TrigonometriaTeoriaComponent } from './components-temas/trigonometria-teoria/trigonometria-teoria.component';
+import { NumerosPrimosEjeciciosComponent } from './components-ejercicios/numeros-primos-ejecicios/numeros-primos-ejecicios.component';
+import { CriteriosDivisibilidadEjeciciosComponent } from './components-ejercicios/criterios-divisibilidad-ejecicios/criterios-divisibilidad-ejecicios.component';
+import { EcuacionesCuadraticasEjeciciosComponent } from './components-ejercicios/ecuaciones-cuadraticas-ejecicios/ecuaciones-cuadraticas-ejecicios.component';
+import { TeoremaPitagorasEjeciciosComponent } from './components-ejercicios/teorema-pitagoras-ejecicios/teorema-pitagoras-ejecicios.component';
+import { AlgebraEjeciciosComponent } from './components-ejercicios/algebra-ejecicios/algebra-ejecicios.component';
+import { FuncionesEjeciciosComponent } from './components-ejercicios/funciones-ejecicios/funciones-ejecicios.component';
+import { TrigonometriaEjeciciosComponent } from './components-ejercicios/trigonometria-ejecicios/trigonometria-ejecicios.component';
+import { GeometriaEjeciciosComponent } from './components-ejercicios/geometria-ejecicios/geometria-ejecicios.component';
+import { CalculoEjeciciosComponent } from './components-ejercicios/calculo-ejecicios/calculo-ejecicios.component';
+import { RedesNeuronalesComponent } from './components/redes-neuronales/redes-neuronales.component';
+import { ProfesoresPanelControlComponent } from './components-usuarios/profesores-panel-control/profesores-panel-control.component';
+import { ProfesoresNavbarComponent } from './components-usuarios/profesores-navbar/profesores-navbar.component';
+import { ProfesoresArbolDecisionComponent } from './components-usuarios/profesores-arbol-decision/profesores-arbol-decision.component';
 
 
 @NgModule({
@@ -44,7 +57,20 @@ import { TrigonometriaTeoriaComponent } from './components-temas/trigonometria-t
     GeometriaTeoriaComponent,
     CriteriosDivisibilidadTeoriaComponent,
     TeoremaPitagorasTeoriaComponent,
-    TrigonometriaTeoriaComponent
+    TrigonometriaTeoriaComponent,
+    NumerosPrimosEjeciciosComponent,
+    CriteriosDivisibilidadEjeciciosComponent,
+    EcuacionesCuadraticasEjeciciosComponent,
+    TeoremaPitagorasEjeciciosComponent,
+    AlgebraEjeciciosComponent,
+    FuncionesEjeciciosComponent,
+    TrigonometriaEjeciciosComponent,
+    GeometriaEjeciciosComponent,
+    CalculoEjeciciosComponent,
+    RedesNeuronalesComponent,
+    ProfesoresPanelControlComponent,
+    ProfesoresNavbarComponent,
+    ProfesoresArbolDecisionComponent
   ],
   imports: [
     BrowserModule,

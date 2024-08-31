@@ -1,0 +1,67 @@
+.contenedor{
+    margin: auto;
+    width: 95%;
+    font-family: 'math';
+    background-color: #060202;
+}
+
+.fila-criterios{
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 5%;
+}
+
+.btn-ecuaciones{
+    width: 100%;
+    background-color: #33363d;
+}
+
+.text-ecuaciones{
+    text-align: center;
+    background-color: #33363d;
+    margin: auto;
+    width: 90%;
+}
+
+.switch-criterios{
+    width: 50%;
+}
+
+.contenedor-text-area{
+    margin: auto;
+    width: 95%;
+}
+
+.container-opciones{
+    background-color: #33363d;
+    margin: auto;
+    width: 90%;
+}
+
+.form-style{
+    width: 90%;
+    margin: 0 auto;
+    background-color: #33363d;
+}
+
+.inputs-forms{
+    display: flex; 
+    align-items: center;
+}
+
+.check-style{
+    width: 30px;
+    height: 30px;
+}
+
+.OpcionRespuesta{
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    color: #33363d;
+    font-size: large;
+}
+
+.input-criterios{
+    width: 100%;
+}

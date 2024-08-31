@@ -1,0 +1,68 @@
+.contenedor{
+    margin: auto;
+    width: 95%;
+    font-family: 'math';
+    background-color: #dda625;
+}
+
+.fila-criterios{
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 5%;
+}
+
+.btn-trigonometria{
+    width: 100%;
+    background-color: #bfec3d;
+}
+
+.switch-criterios{
+    width: 50%;
+}
+
+.text-trigonometria{
+    text-align: center;
+    background-color: #bfec3d;
+    margin: auto;
+    width: 90%;
+}
+
+.container-opciones{
+    background-color: #bfec3d;
+    margin: auto;
+    width: 90%;
+}
+
+.form-style{
+    width: 90%;
+    margin: 0 auto;
+    background-color: #bfec3d;
+}
+
+.inputs-forms{
+    display: flex; 
+    align-items: center;
+}
+
+.check-style{
+    width: 30px;
+    height: 30px;
+}
+
+.OpcionRespuesta{
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    color: #000000;
+    font-size: large;
+    font-weight: bold;
+}
+
+.contenedor-text-area{
+    margin: auto;
+    width: 95%;
+}
+
+.input-criterios{
+    width: 100%;
+}

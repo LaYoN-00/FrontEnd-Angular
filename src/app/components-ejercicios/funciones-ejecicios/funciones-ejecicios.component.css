@@ -1,0 +1,68 @@
+.contenedor{
+    margin: auto;
+    width: 95%;
+    font-family: 'math';
+    background-color: #a10e0f;
+}
+
+.fila-criterios{
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 5%;
+}
+
+.btn-funciones{
+    width: 100%;
+    background-color: #df081f;
+}
+
+.switch-criterios{
+    width: 50%;
+}
+
+.text-funciones{
+    text-align: center;
+    background-color: #df081f;
+    margin: auto;
+    width: 90%;
+}
+
+.container-opciones{
+    background-color: #df081f;
+    margin: auto;
+    width: 90%;
+}
+
+.form-style{
+    width: 90%;
+    margin: 0 auto;
+    background-color: #df081f;
+}
+
+.inputs-forms{
+    display: flex; 
+    align-items: center;
+}
+
+.check-style{
+    width: 30px;
+    height: 30px;
+}
+
+.OpcionRespuesta{
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    color: #df081f;
+    font-size: large;
+    font-weight: bold;
+}
+
+.contenedor-text-area{
+    margin: auto;
+    width: 95%;
+}
+
+.input-criterios{
+    width: 100%;
+}

@@ -2,3 +2,19 @@
     position: relative;
     z-index: 2;
 }
+
+.img-ecuaciones-cuadraticas{
+    width: 600px;
+    height: 500px;
+}
+
+.contenedor-imagenes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-ecuaciones{
+    width: 600px;
+    height: 300px;
+}

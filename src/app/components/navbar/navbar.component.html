@@ -1,46 +1,42 @@
 <!--routerLink="/add"-->
 <nav class="navbar navbar-expand-lg bg-info" data-bs-theme="light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">INICIO</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="dropdown" [class.show]="dropdownOpen">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" (click)="dropdownOpen = !dropdownOpen">
-          Opciones
+    
+    <a class="navbar-brand titulo-navbar" href="#">Smarth IaNum</a>
+    
+    <div class="navbar-toggler">
+        <button class="btn btn-outline-primary btn-navbar" (click)="dropdownOpen = !dropdownOpen">
+          <span class="material-symbols-outlined">menu</span>
         </button>
-        <div class="dropdown-menu" [class.show]="dropdownOpen" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Pantalla Principal</a>
-          <a class="dropdown-item" routerLink="/profesores-login">Profesores</a>
-          <a class="dropdown-item" routerLink="/alumnos-login">Alumnos</a>
-          <a class="dropdown-item" routerLink="/chatbot">Chatbot</a>
-          <a class="dropdown-item" href="/cursos">Otra Funciones</a>
-          <a class="dropdown-item" href="/temario">Material Extra</a>
+        <div class="dropdown-menu" [class.show]="dropdownOpen">
+          <a class="dropdown-item text-center" routerLink="/profesores-login">Profesores</a>
+          <a class="dropdown-item text-center" routerLink="/alumnos-login">Alumnos</a>
+          <a class="dropdown-item text-center" href="/temario">Temas</a>
+          <a class="dropdown-item text-center" href="/redes-neuronales-mainscreen">Redes Neuronales</a>
+          <a class="dropdown-item text-center" href="/cursos">Otras Funciones</a>
         </div>
-      </div>
-    </button>
+    </div>
+
     <div class="collapse navbar-collapse" id="navbarColor03">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Pantalla Principal
-            <span class="visually-hidden">(current)</span>
-          </a>
+          <a class="nav-link" routerLink="/profesores-login">Unete Como Profesor</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/profesores-login">Profesores</a>
+          <a class="nav-link" routerLink="/alumnos-login">Unete Como Alumno</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/alumnos-login">Alumnos</a>
+          <a class="nav-link" href="/temario">Conoce Nuestro Temario</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/chatbot">Chatbot</a>
+          <a class="nav-link" href="/redes-neuronales-mainscreen">Utiliza Nuestras Redes Neuronales</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/cursos">Otras funciones</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/temario">Material Extra</a>
         </li>
       </ul>
       
     </div>
   </div>
+  
 </nav>

@@ -1,0 +1,27 @@
+.contenedor{
+    margin: auto;
+    width: 95%;
+    height: auto;
+    background-color: #3c0071;
+    margin-top: 2%;
+    font-family: 'math';
+}
+
+.elementos{
+    margin: auto;
+}
+
+.input-NP{
+    width: 100%;
+}
+
+.btn-NP{
+    width: 100%;
+    background-color: #b3418e;
+    color:black;
+    padding: auto;
+}
+
+.msj-NP{
+    height: auto;
+}

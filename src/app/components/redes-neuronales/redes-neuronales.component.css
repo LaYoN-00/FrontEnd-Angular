@@ -1,0 +1,7 @@
+.columna {
+    margin-top: 3%;
+    border: 2px solid black; /* Grosor, estilo y color del borde */
+    padding: 10px; /* Espacio interno para que el contenido no toque el borde */
+    background-color: #309ca5;
+    text-align: center;
+}

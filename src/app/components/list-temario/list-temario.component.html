@@ -1,70 +1,109 @@
-<div class="container mt-3 mb-5 text-center">
-    <app-chatbot-interfaz></app-chatbot-interfaz>
-    <table class="table table-hover">
-        <thead>
-            <tr>
-                <th scope="col">Nombre del Tema</th>
-                <th scope="col">Teoria</th>
-                <th scope="col">Ejecicios</th>
-                <th scope="col">Ayuda con IA</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="table-active">
-                <th scope="row">Números Primos</th>
-                <td><button type="button" class="btn btn-active btn-sm" routerLink="/numeros-primos-teoria">Disponible</button></td>
-                <td>Column content</td>
-                <td>Column content</td>
-            </tr>
-            <tr>
-                <th scope="row">Criterios de Divisibilidad</th>
-                <td><button type="button" class="btn btn-active btn-sm" routerLink="/criterios-divisibilidad-teoria">Disponible</button></td>
-                <td>Column content</td>
-                <td>Column content</td>
-            </tr>
-            <tr class="table-primary">
-                <th scope="row">Ecuaciones Cuadraticas</th>
-                <td><button type="button" class="btn btn-primary btn-sm" routerLink="/ecuaciones-cuadraticas-teoria">Disponible</button></td>
-                <td>Column content</td>
-                <td>Column content</td>
-            </tr>
-            <tr class="table-secondary">
-                <th scope="row">Teorema de Pitagoras</th>
-                <td><button type="button" class="btn btn-secondary btn-sm" routerLink="/teorema-pitagoras-teoria">Disponible</button></td>
-                <td>Column content</td>
-                <td>Column content</td>
-            </tr>
-            <tr class="table-success">
-                <th scope="row">Álgebra</th>
-                <td><button type="button" class="btn btn-success btn-sm .text-primary-emphasis" routerLink="/algebra-teoria">Disponible</button></td>
-                <td>Column content</td>
-                <td>Column content</td>
-            </tr>
-            <tr class="table-danger">
-                <th scope="row">Funciones</th>
-                <td><button type="button" class="btn btn-danger btn-sm" routerLink="/funciones-teoria">Disponible</button></td>
-                <td>Column content</td>
-                <td>Column content</td>
-            </tr>
-            <tr class="table-warning">
-                <th scope="row">Trigonometria</th>
-                <td><button type="button" class="btn btn-warning btn-sm" routerLink="/trigonometria-teoria">Disponible</button></td>
-                <td>Column content</td>
-                <td>Column content</td>
-            </tr>
-            <tr class="table-info">
-                <th scope="row">Geometria</th>
-                <td><button type="button" class="btn btn-info btn-sm" routerLink="/geometria-teoria">Disponible</button></td>
-                <td>Column content</td>
-                <td>Column content</td>
-            </tr>
-            <tr class="table-light">
-                <th scope="row">Calculo</th>
-                <td><button type="button" class="btn btn-light btn-sm" routerLink="/calculo-teoria">Disponible</button></td>
-                <td>Column content</td>
-                <td>Column content</td>
-            </tr>
-        </tbody>
-    </table>
+<div class="container-list-temario mx-auto mt-2 mb-2">
+    <div class="row">
+        <div class="col-sm">
+            <div class="card text-white bg-numeros-primos mb-3 mx-auto text-center" style="max-width: 20rem;">
+                <div class="card-header mb-3">NUMEROS PRIMOS</div>
+                <app-chatbot-interfaz></app-chatbot-interfaz>
+                <img src="https://st3.depositphotos.com/2398103/12731/v/950/depositphotos_127310470-stock-illustration-colorful-numbers-icons.jpg" class="imagenes-card"> 
+                <div class="card-header mt-3">
+                    <button type="button" class="btn bg-numeros-primos btn-lg" routerLink="/numeros-primos-teoria">Teoria</button>
+                    <button type="button" class="btn bg-numeros-primos btn-lg" routerLink="/numeros-primos-ejercicios">Ejecicios</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card text-white bg-criterios-divisibilidad mb-3 mx-auto text-center" style="max-width: 20rem;">
+                <div class="card-header mb-3">CRITERIOS DE DIVISIBILIDAD</div>
+                <app-chatbot-interfaz></app-chatbot-interfaz>
+                <img src="https://th.bing.com/th/id/R.7417206e49655cf7d3849b33fecbe3a7?rik=YrzN3gmmYTsagg&riu=http%3a%2f%2festudiandoconangela.weebly.com%2fuploads%2f1%2f0%2f3%2f7%2f10374254%2f9700976_orig.jpg&ehk=Yioi83FifwQ8ztkfRcCZ%2fwgtOz0tmRSkR9hfIoejr%2bk%3d&risl=&pid=ImgRaw&r=0" class="imagenes-card"> 
+                <div class="card-header mt-3">
+                    <button type="button" class="btn bg-criterios-divisibilidad btn-lg" routerLink="/criterios-divisibilidad-teoria">Teoria</button>
+                    <button type="button" class="btn bg-criterios-divisibilidad btn-lg" routerLink="/criterios-divisibilidad-ejercicios">Ejecicios</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card text-white bg-primary mb-3 mx-auto text-center" style="max-width: 20rem;">
+                <div class="card-header mb-3">ECUACIONES CUADRATICAS</div>
+                <app-chatbot-interfaz></app-chatbot-interfaz>
+                <img src="https://th.bing.com/th/id/R.0f078f0589b63747efa7a18b2d1ff465?rik=Sud%2fwLf7SEYn1g&riu=http%3a%2f%2f3.bp.blogspot.com%2f-5ZzfvigfxHY%2fUsjDMIiAxAI%2fAAAAAAAAAQw%2f6OR9U25g8Ho%2fs1600%2fecuaciones%2bcuadraticas%2bcompletando%2bel%2bcuadrado.png&ehk=2YWZucdp%2faybQovDCwelATYL7pKtm8GU6zGx6u9y6bU%3d&risl=&pid=ImgRaw&r=0" class="imagenes-card"> 
+                <div class="card-header mt-3">
+                    <button type="button" class="btn bg-primary btn-lg" routerLink="/ecuaciones-cuadraticas-teoria">Teoria</button>
+                    <button type="button" class="btn bg-primary btn-lg" routerLink="/ecuaciones-cuadraticas-ejercicios">Ejecicios</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-</div>
+    <div class="row">
+        <div class="col-sm">
+            <div class="card text-white bg-secondary mb-3 mx-auto text-center" style="max-width: 20rem;">
+                <div class="card-header mb-3">TEOREMA DE PITAGORAS</div>
+                <app-chatbot-interfaz></app-chatbot-interfaz>
+                <img src="https://significado.com/contenido/imp/estudio-de/Pitagoras-2-teorema-formula-matematicas.jpg" class="imagenes-card"> 
+                <div class="card-header mt-3">
+                    <button type="button" class="btn bg-secondary btn-lg" routerLink="/teorema-pitagoras-teoria">Teoria</button>
+                    <button type="button" class="btn bg-secondary btn-lg" routerLink="/teorema-pitagoras-ejercicios">Ejecicios</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card text-white bg-success mb-3 mx-auto text-center" style="max-width: 20rem;">
+                <div class="card-header mb-3">ALGEBRA</div>
+                <app-chatbot-interfaz></app-chatbot-interfaz>
+                <img src="https://th.bing.com/th/id/OIP.hDyZK_CXEK6zumS_DoccJAHaHa?w=230&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7" class="imagenes-card"> 
+                <div class="card-header mt-3">
+                    <button type="button" class="btn bg-success btn-lg" routerLink="/algebra-teoria">Teoria</button>
+                    <button type="button" class="btn bg-success btn-lg" routerLink="/algebra-ejercicios">Ejecicios</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card text-white bg-danger mb-3 mx-auto text-center" style="max-width: 20rem;">
+                <div class="card-header mb-3">FUNCIONES</div>
+                <app-chatbot-interfaz></app-chatbot-interfaz>
+                <img src="https://3.bp.blogspot.com/-hyTLmG26Opg/UMzpYQWjIBI/AAAAAAAAOKk/KtFk6b3z6bM/s1600/la+gr%C3%A1fica+de+una+funci%C3%B3n+2.png" class="imagenes-card"> 
+                <div class="card-header mt-3">
+                    <button type="button" class="btn bg-danger btn-lg" routerLink="/funciones-teoria">Teoria</button>
+                    <button type="button" class="btn bg-danger btn-lg" routerLink="/funciones-ejercicios">Ejecicios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm">
+            <div class="card text-white bg-warning mb-3 mx-auto text-center" style="max-width: 20rem;">
+                <div class="card-header mb-3">TRIGONOMETRIA</div>
+                <app-chatbot-interfaz></app-chatbot-interfaz>
+                <img src="https://1.bp.blogspot.com/-Pg762wbDmI4/WDQsgLhKVKI/AAAAAAAACY4/olDNhnXkxfc3WWIKeyz6hC--bzhow8zPQCLcB/s1600/trigo%2B4.jpg" class="imagenes-card"> 
+                <div class="card-header mt-3">
+                    <button type="button" class="btn bg-warning btn-lg" routerLink="/trigonometria-teoria">Teoria</button>
+                    <button type="button" class="btn bg-warning btn-lg" routerLink="/trigonometria-ejercicios">Ejecicios</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card text-white bg-info mb-3 mx-auto text-center" style="max-width: 20rem;">
+                <div class="card-header mb-3">GEOMETRIA</div>
+                <app-chatbot-interfaz></app-chatbot-interfaz>
+                <img src="https://th.bing.com/th/id/OIP.b1RN4hEnW2T0-C_DhswLpgHaFQ?w=234&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7" class="imagenes-card"> 
+                <div class="card-header mt-3">
+                    <button type="button" class="btn bg-info btn-lg" routerLink="/geometria-teoria">Teoria</button>
+                    <button type="button" class="btn bg-info btn-lg" routerLink="/geometria-ejercicios">Ejecicios</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card text-white bg-light mb-3 mx-auto text-center" style="max-width: 20rem;">
+                <div class="card-header mb-3">CALCULO</div>
+                <app-chatbot-interfaz></app-chatbot-interfaz>
+                <img src="https://th.bing.com/th/id/OIP.eqNFv4nSQKlon4dkPj0gNAHaFB?w=265&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7" class="imagenes-card"> 
+                <div class="card-header mt-3">
+                    <button type="button" class="btn bg-light btn-lg" routerLink="/calculo-teoria">Teoria</button>
+                    <button type="button" class="btn bg-light btn-lg" routerLink="/calculo-ejercicios">Ejecicios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  

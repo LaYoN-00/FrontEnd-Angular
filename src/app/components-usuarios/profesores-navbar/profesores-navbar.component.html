@@ -1,0 +1,34 @@
+<!--routerLink="/add"-->
+<nav class="navbar navbar-expand-lg bg-info" data-bs-theme="light">
+    <div class="container-fluid">
+      
+      <a class="navbar-brand titulo-navbar" href="#">PROFESORES</a>
+      
+      <div class="navbar-toggler">
+          <button class="btn btn-outline-primary btn-navbar" (click)="dropdownOpen = !dropdownOpen">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+          <div class="dropdown-menu" [class.show]="dropdownOpen">
+            <a class="dropdown-item text-center" routerLink="/">Clases</a>
+            <a class="dropdown-item text-center" routerLink="/">Actividades</a>
+            <a class="dropdown-item text-center" href="/">Arbol de Decision</a>
+          </div>
+      </div>
+  
+      <div class="collapse navbar-collapse" id="navbarColor03">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="dropdown-item text-center" routerLink="/">Clases</a>
+          </li>
+          <li class="nav-item">
+            <a class="dropdown-item text-center" routerLink="/">Actividades</a>
+          </li>
+          <li class="nav-item">
+            <a class="dropdown-item text-center" href="/">Arbol de Decision</a>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+    
+  </nav>

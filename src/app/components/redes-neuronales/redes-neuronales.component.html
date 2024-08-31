@@ -1,0 +1,39 @@
+<div class="container  text-center  text-dark">
+    <div class="row">
+        <div class="col-4 columna">
+            <form [formGroup]="formPeticionRed" (ngSubmit)="SendPeticionRed()">
+                <p>Red Neruonal Para Resolver Ecuaciones de Primer Grado con la siguiente forma (X+A=B)</p>
+                <input formControlName="coeficiente" type="number" class="form-control mt-3" placeholder="Coeficiente de X">
+                <span *ngIf="formPeticionRed.get('coeficiente')?.hasError('required') && formPeticionRed.get('coeficiente')?.touched">
+                    <strong>El Campo Codigo Es Requerido</strong>
+                </span>
+                <input formControlName="variableA" type="number" class="form-control mt-3" placeholder="variable A">
+                <span *ngIf="formPeticionRed.get('variableA')?.hasError('required') && formPeticionRed.get('variableA')?.touched">
+                    <strong>El Campo Codigo Es Requerido</strong>
+                </span>
+                <input formControlName="variableB" type="number" class="form-control mt-3" placeholder="variable B">
+                <span *ngIf="formPeticionRed.get('variableB')?.hasError('required') && formPeticionRed.get('variableB')?.touched">
+                    <strong>El Campo Codigo Es Requerido</strong>
+                </span>
+                <button [disabled]="formPeticionRed.invalid" type="submit" class="btn btn-outline-success btn-sm">ACEPTAR</button>
+            </form>
+        </div>
+        <div class="col-4 columna">
+            Columna 2
+        </div>
+        <div class="col-4 columna">
+            Columna 3
+        </div>
+    </div>
+</div>
+
+<div class="container   text-center  text-dark">
+    <div class="row">
+        <div class="col-12  columna">
+            <p>Resultado de la Red Neuronal (Recuerda que puede haber ocaciones donde no se llegue al resultado esperado)</p>
+            <h1 *ngIf="resultado!=null">
+                {{resultado}}
+            </h1>
+        </div>
+    </div>
+</div>

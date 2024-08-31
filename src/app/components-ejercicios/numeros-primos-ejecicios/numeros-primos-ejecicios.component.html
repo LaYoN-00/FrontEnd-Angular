@@ -1,0 +1,27 @@
+<div class="contenedor text-center">
+    <H1>En este pequeño ejercicio podrás escoger filas de 5 números aleatorios para ver SI son primos o NO.</H1>
+    <div class="row elementos mb-3">
+        <div class="col-md-4">
+            <input [(ngModel)]="textoDeInput" type="number" class="form-control text-center input-NP" placeholder="Descripción de la imagen">
+        </div>
+        <div class="col-md-4">
+            <button (click)="imprimirEnConsola()" class="btn btn-outline-secondary btn-NP" type="button">MOSTRAR NÚMEROS</button>
+        </div>
+        <div class="col-md-4">
+            <div [style.background-color]="color" class="msj-NP">
+                <h4>{{ mensajeCoordenada }}</h4>
+            </div>  
+        </div>
+    </div>
+    <table class="table table-bordered mt-3">
+        <tbody class="mb-3">
+            <tr *ngFor="let row of numerosAleatorios; let i = index">
+                <td *ngFor="let numero of row; let j = index">
+                    <button (click)="mostrarMensaje(i, j)" class="btn-NP">
+                        <h3 class="mt-2">{{ numero }}</h3>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>  

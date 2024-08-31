@@ -1,4 +1,19 @@
+.bg-numeros-primos{
+    background-color: #9b34b1;
+}
+
 .contenedor{
     position: relative;
     z-index: 2;
+}
+
+.contenedor-imagenes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-numeros-primos{
+    width: 600px;
+    height: 300px;
 }

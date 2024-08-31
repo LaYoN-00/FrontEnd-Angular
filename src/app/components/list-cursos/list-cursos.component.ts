@@ -23,6 +23,7 @@ export class ListCursosComponent {
     this._cursosService.getListCursos().subscribe((data: Curso[]) => {
       // Convierte el objeto a un iterable (array)
       this.ListCursosV2 = data
+      console.log(this.ListCursosV2)
     });
   }
 

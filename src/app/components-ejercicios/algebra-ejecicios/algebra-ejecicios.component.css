@@ -1,0 +1,68 @@
+.contenedor{
+    margin: auto;
+    width: 95%;
+    font-family: 'math';
+    background-color: #609853;
+}
+
+.fila-criterios{
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 5%;
+}
+
+.btn-algebra{
+    width: 100%;
+    background-color: #15c156;
+}
+
+.switch-criterios{
+    width: 50%;
+}
+
+.text-algebra{
+    text-align: center;
+    background-color: #15c156;
+    margin: auto;
+    width: 90%;
+}
+
+.container-opciones{
+    background-color: #15c156;
+    margin: auto;
+    width: 90%;
+}
+
+.form-style{
+    width: 90%;
+    margin: 0 auto;
+    background-color: #15c156;
+}
+
+.inputs-forms{
+    display: flex; 
+    align-items: center;
+}
+
+.check-style{
+    width: 30px;
+    height: 30px;
+}
+
+.OpcionRespuesta{
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    color: #15c156;
+    font-size: large;
+    font-weight: bold;
+}
+
+.contenedor-text-area{
+    margin: auto;
+    width: 95%;
+}
+
+.input-criterios{
+    width: 100%;
+}
