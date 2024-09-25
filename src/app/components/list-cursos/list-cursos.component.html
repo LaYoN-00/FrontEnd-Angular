@@ -1,34 +1,29 @@
-<div class="container m-2">
-    <div class="title">
-
+<div class="card mt-3">
+    <div class="title mt-3 mb-3">
         <h4>Listado de Cursos</h4>
-        <button type="button" class="btn btn-outline-info btn-sm" routerLink="/add">AGREGAR</button>
-
+        <button routerLink="/panel-profesor/{{IDprofesor}}" type="button" class="btn btn-outline-danger btn-sm">VOLVER</button>
+        <button type="button" class="btn btn-outline-info btn-sm" routerLink="/add/{{IDprofesor}}">AGREGAR</button>
     </div>
-
     <table class="table table-hover">
-
         <thead>
             <tr>
                 <th scope="col">CODIGO</th>
                 <th scope="col">NOMBRE</th>
                 <th scope="col">CREDITOS</th>
-                <th scope="col"></th>
+                <th scope="col">ACCIONES</th>
             </tr>
         </thead>
-
         <tbody>
             <tr *ngFor="let item of ListCursosV2" class="table-secondary">
                 <th>{{item.codigo}}</th>
-                <td>{{item.nombre}}</td>
+                <td>{{item.materia}}</td>
                 <td>{{item.creditos}}</td>
                 <td>
-                    <button routerLink="/edit/{{item.codigo}}" type="button" class="btn btn-outline-success btn-sm">EDITAR</button>
-                    <button (click)="deleteCurso(item.codigo!)" type="button" class="btn btn-outline-danger btn-sm">ELIMINAR</button>
+                    <button routerLink="/edit/{{IDprofesor}}/{{item.id_curso}}" type="button" class="btn btn-outline-success btn-sm">EDITAR</button>
+                    <button (click)="deleteCurso(item.id_curso)" type="button" class="btn btn-outline-danger btn-sm">ELIMINAR</button>
                 </td>
             </tr>
         </tbody>
-
     </table>
 
 </div>

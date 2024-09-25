@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Curso } from 'src/app/interfaces/curso';
 import { CursoService } from 'src/app/service/curso.service';
 
@@ -9,10 +10,9 @@ import { CursoService } from 'src/app/service/curso.service';
 })
 export class ListCursosComponent {
   ListCursosV2: Curso[] = []
-
-
-  constructor(private _cursosService: CursoService){
-
+  public IDprofesor:number;
+  constructor(private _cursosService: CursoService,private aRouter:ActivatedRoute){
+    this.IDprofesor=Number(aRouter.snapshot.paramMap.get('idprofesor'))
   }
 
   ngOnInit(): void{
@@ -20,18 +20,15 @@ export class ListCursosComponent {
   }
 
   getListCursos() {
-    this._cursosService.getListCursos().subscribe((data: Curso[]) => {
+    this._cursosService.getListCursos(this.IDprofesor).subscribe((data: Curso[]) => {
       // Convierte el objeto a un iterable (array)
       this.ListCursosV2 = data
       console.log(this.ListCursosV2)
     });
   }
 
-  deleteCurso(codigo:String){
-    this._cursosService.deleteCursos(codigo).subscribe(data => {
-      console.log(data)
-      this.getListCursos();
-    })
+  deleteCurso(codigo:any){
+    console.log(codigo)
   }
 
 }

@@ -7,9 +7,10 @@
 <div *ngIf="mostrarContenido" class="chat-posicion">
     <div class="card text-white mb-3 text-center chat-container" style="max-width: 20rem;">
         <button (click)="MostrarParrafo()" class="btn btn-primary boton-close mb-2">CERRAR EL CHAT</button>
+        <app-progress-bar *ngIf="loading"></app-progress-bar>
         <img src="assets/imagenes/icon-chatbot.png" class="incons">
         <div class="overflow-auto mb-4">
-            <div class="mensajes"> 
+            <div *ngIf="!loading" class="mensajes"> 
                 <p *ngFor="let peticion of peticiones; let i = index" [ngClass]="{'chat-enviado': i % 2 === 0, 'chat-recivido': i % 2 !== 0}">
                     {{ peticion }}
                 </p>

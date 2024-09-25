@@ -31,5 +31,16 @@ export class RedesNeuronalesComponent {
       this.resultado=data.prediccion
     })
   }
+
+  SendPeticionRedv2(){
+    const peticion: RedPeticion={
+      coeficiente:this.formPeticionRed.value.coeficiente,
+      variableA:this.formPeticionRed.value.variableA,
+      variableB:this.formPeticionRed.value.variableB
+    }
+    this._ServiceRed.postRedPeticionV2(peticion).subscribe((data:any)=>{
+      this.resultado=data.prediccion
+    })
+  }
 }
 

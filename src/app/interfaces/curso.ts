@@ -1,5 +1,13 @@
 export interface Curso{
-    codigo?: string,
+    id_curso?:number,
+    codigo: string,
+    materia: string,
     creditos: number,
-    nombre: string,
+    profesor:string,
+    id_profesor?:number
+}
+
+export interface CursoMatricula{
+    idcurso:number,
+    idalumno:number
 }

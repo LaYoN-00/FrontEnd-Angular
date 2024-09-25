@@ -1,22 +1,30 @@
-<div class="d-flex justify-content-center mt-5">
+<div class="contenedor mt-3">
     <div class="card text-white bg-info mb-3 text-center">
-        <app-chatbot-interfaz></app-chatbot-interfaz>
-        <div class="card-header">Login de Maestro</div>
+        <div class="card-header text-white text-math">
+            <h1>Bienvenido a Smarth-IaNum Docente</h1>
+        </div>
         <div class="card-body">
-            <p class="card-text">*INFO DEL LOGIN*</p>
-            <p class="card-text">
-                Recuerda que si no tienes una cuenta puedes crear una dandole click al boton de abajo
-            </p>
-            <div>
-                <input type="text" class="form-control text-center" id="exampleInputPassword1" placeholder="Password" autocomplete="off">
-                <input type="password" class="form-control text-center" id="exampleInputPassword1" placeholder="Password" autocomplete="off">
-                <div class="d-grid gap-2 mt-3">
-                    <button class="btn btn-lg btn-outline-success" type="button">LOGIN</button>
-                    <button class="btn btn-lg btn-outline-danger" type="button">SING UP</button>
+            <app-chatbot-interfaz></app-chatbot-interfaz>
+            <div class="row">
+                <div class="col-6">
+                    <img src="assets/imagenes/maestro.png" class="imagenes-phone img-fluid d-block m-3">
                 </div>
-            </div>
+                <div class="col-6 mt-3">
+                    <h3 class="card-text text-dark text-math mb-5">Recuerda que si no tienes una cuenta puedes crear una dandole click al boton de abajo</h3>
+                    <form [formGroup]="formLogin" (ngSubmit)="Loggin()">
+                        <input formControlName="username" type="text" class="form-control form-loggin mt-3" placeholder="Ingrese Su Username">
+                        <span *ngIf="formLogin.get('username')?.hasError('required') && formLogin.get('username')?.touched">
+                            <strong>NO olvide de poner su Username</strong>
+                        </span>
+                        <input formControlName="password" type="password" class="form-control form-loggin mt-3" placeholder="Ingrese Su Password">
+                        <span *ngIf="formLogin.get('password')?.hasError('required') && formLogin.get('password')?.touched">
+                            <strong>NO olvide de poner su Password</strong>
+                        </span>
+                        <button [disabled]="formLogin.invalid" type="submit" class="btn btn-success btn-lg mt-3 mb-2">ACEPTAR</button>
+                    </form>
+                    <button routerLink="/profesor-sing-up" class="btn btn-outline-danger btn-lg">REGISTRAR</button>
+                </div>
+              </div>
         </div>
     </div>
-</div>  
-
-<button type="button" class="btn bg-numeros-primos btn-lg" routerLink="/panel-profesor">ENTRAR SIN CREDENCIALES</button>
+</div>

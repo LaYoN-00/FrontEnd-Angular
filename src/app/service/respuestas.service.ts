@@ -9,8 +9,8 @@ import { OpcionesRespuestas } from "../interfaces/respuestas";
 })
 
 export class RespuestaService{
-    private myAppUrl: string
     private myAppUrlV2: string
+    private myAppUrl: string
     private myAPIUrl: string
 
     constructor(private http:HttpClient){
@@ -20,30 +20,30 @@ export class RespuestaService{
     }
 
     getOpcionesRespuestasCriterios(ejercicio:number):Observable<OpcionesRespuestas>{
-        return this.http.get<OpcionesRespuestas>(this.myAppUrl+this.myAPIUrl+'criterios/'+ejercicio)
+        return this.http.get<OpcionesRespuestas>(this.myAppUrlV2+this.myAPIUrl+'criterios/'+ejercicio)
     }
 
     getOpcionesRespuestasEcuaciones(ejercicio:number):Observable<OpcionesRespuestas>{
-        return this.http.get<OpcionesRespuestas>(this.myAppUrl+this.myAPIUrl+'ecuaciones_cuadraticas/'+ejercicio)
+        return this.http.get<OpcionesRespuestas>(this.myAppUrlV2+this.myAPIUrl+'ecuaciones_cuadraticas/'+ejercicio)
     }
 
     getOpcionesRespuestasTeoremas(ejercicio:number):Observable<OpcionesRespuestas>{
-        return this.http.get<OpcionesRespuestas>(this.myAppUrl+this.myAPIUrl+'teorema_pitagoras/'+ejercicio)
+        return this.http.get<OpcionesRespuestas>(this.myAppUrlV2+this.myAPIUrl+'teorema_pitagoras/'+ejercicio)
     }
 
     getOpcionesRespuestasAlgebra(ejercicio:number):Observable<OpcionesRespuestas>{
-        return this.http.get<OpcionesRespuestas>(this.myAppUrl+this.myAPIUrl+'algebra/'+ejercicio)
+        return this.http.get<OpcionesRespuestas>(this.myAppUrlV2+this.myAPIUrl+'algebra/'+ejercicio)
     }
 
     getOpcionesRespuestasFunciones(ejercicio:number):Observable<OpcionesRespuestas>{
-        return this.http.get<OpcionesRespuestas>(this.myAppUrl+this.myAPIUrl+'funciones/'+ejercicio)
+        return this.http.get<OpcionesRespuestas>(this.myAppUrlV2+this.myAPIUrl+'funciones/'+ejercicio)
     }
 
     getOpcionesRespuestasTrigonometria(ejercicio:number):Observable<OpcionesRespuestas>{
-        return this.http.get<OpcionesRespuestas>(this.myAppUrl+this.myAPIUrl+'trigonometria/'+ejercicio)
+        return this.http.get<OpcionesRespuestas>(this.myAppUrlV2+this.myAPIUrl+'trigonometria/'+ejercicio)
     }
 
     getOpcionesRespuestasDerivadas(ejercicio:number):Observable<OpcionesRespuestas>{
-        return this.http.get<OpcionesRespuestas>(this.myAppUrl+this.myAPIUrl+'derivadas/'+ejercicio)
+        return this.http.get<OpcionesRespuestas>(this.myAppUrlV2+this.myAPIUrl+'derivadas/'+ejercicio)
     }
 }

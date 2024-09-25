@@ -1,0 +1,12 @@
+.card{
+    border-width: 10px;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-family: 'math';
+}
+.btn{
+    width: 90%;
+    background-color: #18072e;
+    color:#cde9df
+}

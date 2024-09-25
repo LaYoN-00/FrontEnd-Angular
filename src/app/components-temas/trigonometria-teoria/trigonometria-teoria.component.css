@@ -6,3 +6,15 @@
     position: relative;
     z-index: 2;
 }
+
+
+.contenedor-imagenes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-numeros-primos{
+    width: 600px;
+    height: 300px;
+}

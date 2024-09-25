@@ -34,9 +34,17 @@ import { GeometriaEjeciciosComponent } from './components-ejercicios/geometria-e
 import { CalculoEjeciciosComponent } from './components-ejercicios/calculo-ejecicios/calculo-ejecicios.component';
 import { RedesNeuronalesComponent } from './components/redes-neuronales/redes-neuronales.component';
 import { ProfesoresPanelControlComponent } from './components-usuarios/profesores-panel-control/profesores-panel-control.component';
-import { ProfesoresNavbarComponent } from './components-usuarios/profesores-navbar/profesores-navbar.component';
 import { ProfesoresArbolDecisionComponent } from './components-usuarios/profesores-arbol-decision/profesores-arbol-decision.component';
-
+import { ProfesoresSingUpComponent } from './components-usuarios/profesores-sing-up/profesores-sing-up.component';
+import { ProfesoresActividadesComponent } from './components-usuarios/profesores-actividades/profesores-actividades.component';
+import { ProfesoresActividadesAddEditActividadesComponent } from './components-usuarios/profesores-actividades-add-edit-actividades/profesores-actividades-add-edit-actividades.component';
+import { AlumnosSingUpComponent } from './components-usuarios/alumnos-sing-up/alumnos-sing-up.component';
+import { AlumnosPanelControlComponent } from './components-usuarios/alumnos-panel-control/alumnos-panel-control.component';
+import { AlumnosClasesComponent } from './components-usuarios/alumnos-clases/alumnos-clases.component';
+import { AlumnosActividadesComponent } from './components-usuarios/alumnos-actividades/alumnos-actividades.component';
+import { AlumnosActividadesFormComponent } from './components-usuarios/alumnos-actividades-form/alumnos-actividades-form.component';
+import { AlumnosListCalificacionesComponent } from './components-usuarios/alumnos-list-calificaciones/alumnos-list-calificaciones.component';
+import { ProgressBarComponent } from './shared/progress-bar/progress-bar.component';
 
 @NgModule({
   declarations: [
@@ -69,8 +77,17 @@ import { ProfesoresArbolDecisionComponent } from './components-usuarios/profesor
     CalculoEjeciciosComponent,
     RedesNeuronalesComponent,
     ProfesoresPanelControlComponent,
-    ProfesoresNavbarComponent,
-    ProfesoresArbolDecisionComponent
+    ProfesoresArbolDecisionComponent,
+    ProfesoresSingUpComponent,
+    ProfesoresActividadesComponent,
+    ProfesoresActividadesAddEditActividadesComponent,
+    AlumnosSingUpComponent,
+    AlumnosPanelControlComponent,
+    AlumnosClasesComponent,
+    AlumnosActividadesComponent,
+    AlumnosActividadesFormComponent,
+    AlumnosListCalificacionesComponent,
+    ProgressBarComponent,
   ],
   imports: [
     BrowserModule,

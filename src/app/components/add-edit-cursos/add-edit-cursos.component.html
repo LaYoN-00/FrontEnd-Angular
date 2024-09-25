@@ -1,11 +1,13 @@
 <div class="row mt-5">
-    <div class="col-lg-4 offset-lg-4">
-        <div class="card text-white bg-danger mb-3" style="max-width: 40rem;">
+    <div class="">
+        <div class="card text-white bg-info mb-3">
             <div class="card-header text-center">{{operacion}} CURSO</div>
             <div class="card-body">
-
                 <form [formGroup]="form" (ngSubmit)="addCurso()">
-
+                    <input formControlName="profesor" [readonly]="true" type="text" class="form-control mt-3" placeholder="Ingrese Profesor de Grupo">
+                    <span *ngIf="form.get('profesor')?.hasError('required') && form.get('profesor')?.touched">
+                        <strong>El Campo Profesor Es Requerido</strong>
+                    </span>
                     <input formControlName="codigo" type="text" class="form-control mt-3" placeholder="Ingrese Codigo de Grupo">
                     <span *ngIf="form.get('codigo')?.hasError('required') && form.get('codigo')?.touched">
                         <strong>El Campo Codigo Es Requerido</strong>
@@ -18,18 +20,14 @@
                     <span *ngIf="form.get('creditos')?.hasError('required') && form.get('creditos')?.touched">
                         <strong>El Campo Creditos Es Requerido</strong>
                     </span>
-
                     <div class="row mt-2 text-center">
-
                         <div class="col-lg-6">
                             <button [disabled]="form.invalid" type="submit" class="btn btn-outline-success btn-sm">ACEPTAR</button>
                         </div>
                         <div class="col-lg-6">
-                            <button routerLink="/" type="button" class="btn btn-outline-danger btn-sm">VOLVER</button>
+                            <button routerLink="/cursos/{{idProfesor}}" type="button" class="btn btn-outline-danger btn-sm">VOLVER</button>
                         </div>
-
                     </div>
-
                 </form>
             </div>
         </div>

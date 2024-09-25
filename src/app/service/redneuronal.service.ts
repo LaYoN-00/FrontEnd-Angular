@@ -20,7 +20,11 @@ export class RedNeuronalService{
     }
 
     postRedPeticion(peticion:RedPeticion):Observable<void>{
-        return this.http.post<void>(this.myAppUrl+this.myAPIUrl,peticion);
+        return this.http.post<void>(this.myAppUrlV2+this.myAPIUrl,peticion);
+    }
+
+    postRedPeticionV2(peticion:RedPeticion):Observable<void>{
+        return this.http.post<void>(this.myAppUrlV2+this.myAPIUrl+'v2',peticion);
     }
 
 }

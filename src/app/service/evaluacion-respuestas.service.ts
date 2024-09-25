@@ -20,30 +20,30 @@ export class EvaluarRespuestaService{
     }
     
     postRespuestaCriterios(respuesta:EnvioRespuestas):Observable<void>{
-        return this.http.post<void>(this.myAppUrl+this.myAPIUrl+'criterios',respuesta)
+        return this.http.post<void>(this.myAppUrlV2+this.myAPIUrl+'criterios',respuesta)
     }
 
     postRespuestaEcuaciones(respuesta:EnvioRespuestas):Observable<void>{
-        return this.http.post<void>(this.myAppUrl+this.myAPIUrl+'ecuaciones_cuadraticas',respuesta)
+        return this.http.post<void>(this.myAppUrlV2+this.myAPIUrl+'ecuaciones_cuadraticas',respuesta)
     }
 
     postRespuestaTeorema(respuesta:EnvioRespuestas):Observable<void>{
-        return this.http.post<void>(this.myAppUrl+this.myAPIUrl+'teorema_pitagoras',respuesta)
+        return this.http.post<void>(this.myAppUrlV2+this.myAPIUrl+'teorema_pitagoras',respuesta)
     }
 
     postRespuestaAlgebra(respuesta:EnvioRespuestas):Observable<void>{
-        return this.http.post<void>(this.myAppUrl+this.myAPIUrl+'algebra',respuesta)
+        return this.http.post<void>(this.myAppUrlV2+this.myAPIUrl+'algebra',respuesta)
     }
 
     postRespuestaFunciones(respuesta:EnvioRespuestas):Observable<void>{
-        return this.http.post<void>(this.myAppUrl+this.myAPIUrl+'funciones',respuesta)
+        return this.http.post<void>(this.myAppUrlV2+this.myAPIUrl+'funciones',respuesta)
     }
 
     postRespuestaTrigonometria(respuesta:EnvioRespuestas):Observable<void>{
-        return this.http.post<void>(this.myAppUrl+this.myAPIUrl+'trigonometria',respuesta)
+        return this.http.post<void>(this.myAppUrlV2+this.myAPIUrl+'trigonometria',respuesta)
     }
 
     postRespuestaDerivadas(respuesta:EnvioRespuestas):Observable<void>{
-        return this.http.post<void>(this.myAppUrl+this.myAPIUrl+'derivadas',respuesta)
+        return this.http.post<void>(this.myAppUrlV2+this.myAPIUrl+'derivadas',respuesta)
     }
 }

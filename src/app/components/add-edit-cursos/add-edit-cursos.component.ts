@@ -11,23 +11,25 @@ import { CursoService } from 'src/app/service/curso.service';
 })
 export class AddEditCursosComponent {
   form: FormGroup;
-  codigo: String;
-  operacion: String = "AGREGAR "
+  idCurso: Number;
+  operacion: String = "AGREGAR"
+  idProfesor:Number;
 
   constructor(private fb: FormBuilder,private _cursoService: CursoService,private router:Router,private aRouter:ActivatedRoute){
     this.form=this.fb.group({
       codigo: ['',Validators.required],
       nombre: ['',Validators.required],
       creditos: ['',Validators.required],
+      profesor: ['',Validators.required],
     })
-    this.codigo=String(aRouter.snapshot.paramMap.get('codigo'))
-    console.log(this.codigo)
+    this.idCurso=Number(aRouter.snapshot.paramMap.get('codigo'))
+    this.idProfesor=Number(aRouter.snapshot.paramMap.get('profesor'))
   }
 
   ngOnInit(): void{
-    if(this.codigo!='null'){
-      this.operacion='EDITAR '
-      this.getCurso(this.codigo);
+    if(this.idCurso!=0){
+      this.operacion='EDITAR'
+      this.getCurso(this.idCurso);
     }
   }
 
@@ -36,37 +38,35 @@ export class AddEditCursosComponent {
     //console.log(this.form)
     const curso: Curso = {
       codigo: this.form.value.codigo,
-      nombre: this.form.value.nombre,
-      creditos: this.form.value.creditos
+      materia: this.form.value.nombre,
+      creditos: this.form.value.creditos,
+      profesor: this.form.value.profesor
     }
 
-    const cursoActualizado: Curso={
-      nombre: this.form.value.nombre,
-      creditos: this.form.value.creditos
-    }
-
-    if(this.codigo!='null'){
-      this._cursoService.updateCurso(this.codigo,cursoActualizado).subscribe(()=>{
+    if(this.idCurso!=0){
+      console.log(curso)
+      this._cursoService.updateCurso(this.idCurso,curso).subscribe((data:any)=>{
         console.log("Curso Actualizado")
-        this.router.navigate(['/']);
+        this.router.navigate(['/cursos/'+data.id]);
       })
     }
     else{
       console.log(curso)
-      this._cursoService.saveCurso(curso).subscribe(()=>{
+      this._cursoService.saveCurso(curso).subscribe((data:any)=>{
         console.log("Curso Agregado")
-        this.router.navigate(['/']);
+        this.router.navigate(['/cursos/'+data.id]);
       })
     }
   }
 
-  getCurso(codigo:String){
-    this._cursoService.getCurso(codigo).subscribe((data:Curso)=>{
+  getCurso(idCurso:Number){
+    this._cursoService.getCurso(idCurso).subscribe((data:Curso)=>{
       console.log(data)
       this.form.setValue({
         codigo: data.codigo,
-        nombre: data.nombre,
-        creditos: data.creditos
+        nombre: data.materia,
+        creditos: data.creditos,
+        profesor: data.profesor
       })
     })
   }

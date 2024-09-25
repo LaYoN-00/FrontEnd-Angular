@@ -1,28 +1,50 @@
 <div class="container  text-center  text-dark">
     <div class="row">
-        <div class="col-4 columna">
+        <div class="col-6 columna">
             <form [formGroup]="formPeticionRed" (ngSubmit)="SendPeticionRed()">
                 <p>Red Neruonal Para Resolver Ecuaciones de Primer Grado con la siguiente forma (X+A=B)</p>
-                <input formControlName="coeficiente" type="number" class="form-control mt-3" placeholder="Coeficiente de X">
+                <select formControlName="coeficiente" class="form-select mt-3" id="coeficiente">
+                    <option value="" disabled selected>Selecciona un coeficiente</option>
+                    <option value="1">1</option>
+                </select>
                 <span *ngIf="formPeticionRed.get('coeficiente')?.hasError('required') && formPeticionRed.get('coeficiente')?.touched">
-                    <strong>El Campo Codigo Es Requerido</strong>
+                    <strong>Recuerda que las variables son IMPORTANTES</strong>
                 </span>
                 <input formControlName="variableA" type="number" class="form-control mt-3" placeholder="variable A">
                 <span *ngIf="formPeticionRed.get('variableA')?.hasError('required') && formPeticionRed.get('variableA')?.touched">
-                    <strong>El Campo Codigo Es Requerido</strong>
+                    <strong>Recuerda que las variables son IMPORTANTES</strong>
                 </span>
                 <input formControlName="variableB" type="number" class="form-control mt-3" placeholder="variable B">
                 <span *ngIf="formPeticionRed.get('variableB')?.hasError('required') && formPeticionRed.get('variableB')?.touched">
-                    <strong>El Campo Codigo Es Requerido</strong>
+                    <strong>Recuerda que las variables son IMPORTANTES</strong>
                 </span>
-                <button [disabled]="formPeticionRed.invalid" type="submit" class="btn btn-outline-success btn-sm">ACEPTAR</button>
+                <div class="mt-3">
+                    <button [disabled]="formPeticionRed.invalid" type="submit" class="btn btn-outline-success btn-sm">ACEPTAR</button>
+                </div>
             </form>
         </div>
-        <div class="col-4 columna">
-            Columna 2
-        </div>
-        <div class="col-4 columna">
-            Columna 3
+        <div class="col-6 columna">
+            <form [formGroup]="formPeticionRed" (ngSubmit)="SendPeticionRedv2()">
+                <p>Red Neruonal Para Resolver Ecuaciones de Segundo Grado con la siguiente forma (X+A+B=0)</p>
+                <select formControlName="coeficiente" class="form-select mt-3" id="coeficiente">
+                    <option value="" disabled selected>Selecciona un coeficiente</option>
+                    <option value="1">2</option>
+                </select>
+                <span *ngIf="formPeticionRed.get('coeficiente')?.hasError('required') && formPeticionRed.get('coeficiente')?.touched">
+                    <strong>Recuerda que las variables son IMPORTANTES</strong>
+                </span>
+                <input formControlName="variableA" type="number" class="form-control mt-3" placeholder="variable A">
+                <span *ngIf="formPeticionRed.get('variableA')?.hasError('required') && formPeticionRed.get('variableA')?.touched">
+                    <strong>Recuerda que las variables son IMPORTANTES</strong>
+                </span>
+                <input formControlName="variableB" type="number" class="form-control mt-3" placeholder="variable B">
+                <span *ngIf="formPeticionRed.get('variableB')?.hasError('required') && formPeticionRed.get('variableB')?.touched">
+                    <strong>Recuerda que las variables son IMPORTANTES</strong>
+                </span>
+                <div class="mt-3">
+                    <button [disabled]="formPeticionRed.invalid" type="submit" class="btn btn-outline-success btn-sm">ACEPTAR</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

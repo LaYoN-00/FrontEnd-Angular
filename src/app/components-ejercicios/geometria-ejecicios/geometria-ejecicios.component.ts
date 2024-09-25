@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-geometria-ejecicios',
@@ -20,7 +20,8 @@ export class GeometriaEjeciciosComponent {
   public lados: string = '';
   form: FormGroup;
   formRespuesta: FormGroup;
-
+  fechaActual:any;
+  tiempo=0;
   constructor(private fb:FormBuilder){
     this.form=this.fb.group({
       opcionA:[''],
@@ -29,7 +30,7 @@ export class GeometriaEjeciciosComponent {
       opcionD:[''],
     })
     this.formRespuesta=this.fb.group({
-      respuesta:['']
+      respuesta:['',Validators.required]
     })
   }
 
@@ -44,6 +45,7 @@ export class GeometriaEjeciciosComponent {
       opcionC:'Tercera Variable '+this.ladoC,
       opcionD:'Cuarta Variable '+this.ladoD,
     })
+    this.getFechaActual()
   }
 
   getRandomInt(min: number, max: number): number {
@@ -233,9 +235,20 @@ export class GeometriaEjeciciosComponent {
   getEvaluacion(){
     if(this.formRespuesta.value.respuesta==this.resultado){
       this.evaluacion='CORRECTO'
+      const nuevaFecha = new Date();
+      const diferenciaMilisegundos = nuevaFecha.getTime() - this.fechaActual.getTime();
+      const diferenciaMinutos = diferenciaMilisegundos / (1000 * 60);
+      const minutosEnteros = Math.floor(diferenciaMinutos); // O Math.round(diferenciaMinutos)
+      this.tiempo = minutosEnteros;
+      alert(`Han pasado ${minutosEnteros} minutos.`);
     }
     else{
       this.evaluacion='INCORRECTO'
     }
+  }
+  getFechaActual(){
+    // Simulamos una nueva hora registrada (por ejemplo, 2 horas y 30 minutos después)
+    this.fechaActual = new Date();
+    console.log(this.fechaActual)
   }
 }

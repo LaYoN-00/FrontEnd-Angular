@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Ejercicio } from 'src/app/interfaces/ejercicios';
 import { EnvioRespuestas, OpcionesRespuestas } from 'src/app/interfaces/respuestas';
 import { EjercicioService } from 'src/app/service/ejercicio.service';
@@ -17,6 +17,8 @@ export class CriteriosDivisibilidadEjeciciosComponent {
   form: FormGroup;
   formRespuesta: FormGroup;
   public resultado: string = 'SIN RESPUESTA';
+  fechaActual:any;
+  tiempo=0;
 
   constructor(private _ejercicioService: EjercicioService,private _respuestaService:RespuestaService,
     private fb:FormBuilder,private _enviarRespuestas:EvaluarRespuestaService){
@@ -27,19 +29,9 @@ export class CriteriosDivisibilidadEjeciciosComponent {
         opcionD:[''],
       })
       this.formRespuesta=this.fb.group({
-        respuesta:['']
+        respuesta:['',Validators.required]
       })
     }
-  ngOnInit(){
-    const switchElement = document.getElementById("flexSwitchCheckChecked") as HTMLInputElement;
-    switchElement.addEventListener("change", (event: Event) => {
-      if (switchElement.checked) {
-        console.log("Encendido");
-      } else {
-        console.log("Apagado");
-      }
-    });
-  }
   
   getEjercicio(){
     this._ejercicioService.getEjericio().subscribe((data: Ejercicio[])=>{
@@ -47,6 +39,7 @@ export class CriteriosDivisibilidadEjeciciosComponent {
       this.IDrespuesta=this.ListEjercicios[0].id
       this.getOpcionesRespuestas(this.IDrespuesta)
     });
+    this.getFechaActual()
   }
 
   getOpcionesRespuestas(IDejercicio:number){
@@ -68,7 +61,21 @@ export class CriteriosDivisibilidadEjeciciosComponent {
     }
     this._enviarRespuestas.postRespuestaCriterios(enviarRespuesta).subscribe((data3:any)=>{
       this.resultado=data3.respuesta
+      if(this.resultado='CORRECTA'){
+        const nuevaFecha = new Date();
+        const diferenciaMilisegundos = nuevaFecha.getTime() - this.fechaActual.getTime();
+        const diferenciaMinutos = diferenciaMilisegundos / (1000 * 60);
+        const minutosEnteros = Math.floor(diferenciaMinutos); // O Math.round(diferenciaMinutos)
+        this.tiempo = minutosEnteros;
+        alert(`Han pasado ${minutosEnteros} minutos.`);
+      }
     })
+  }
+
+  getFechaActual(){
+    // Simulamos una nueva hora registrada (por ejemplo, 2 horas y 30 minutos después)
+    this.fechaActual = new Date();
+    console.log(this.fechaActual)
   }
 
 }

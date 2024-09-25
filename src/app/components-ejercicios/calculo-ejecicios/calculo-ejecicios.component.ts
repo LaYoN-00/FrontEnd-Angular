@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { EjercicioDerividaras } from 'src/app/interfaces/ejercicios';
 import { EnvioRespuestas, OpcionesRespuestas } from 'src/app/interfaces/respuestas';
 import { EjercicioService } from 'src/app/service/ejercicio.service';
@@ -17,6 +17,8 @@ export class CalculoEjeciciosComponent {
   form: FormGroup;
   formRespuesta: FormGroup;
   public resultado: string = 'SIN RESPUESTA';
+  fechaActual:any;
+  tiempo=0;
   constructor(private _ejercicioService: EjercicioService,private _respuestaService:RespuestaService,
     private fb:FormBuilder,private _enviarRespuestas:EvaluarRespuestaService
   ){
@@ -27,7 +29,7 @@ export class CalculoEjeciciosComponent {
       opcionD:[''],
     })
     this.formRespuesta=this.fb.group({
-      respuesta:['']
+      respuesta:['',Validators.required]
     })
   }
   
@@ -37,6 +39,7 @@ export class CalculoEjeciciosComponent {
       this.IDrespuesta=this.ListEjercicios[0].id
       this.getOpcionesRespuestas(this.IDrespuesta)
     });
+    this.getFechaActual()
   }
 
   getOpcionesRespuestas(IDejercicio:number){
@@ -57,6 +60,19 @@ export class CalculoEjeciciosComponent {
     }
     this._enviarRespuestas.postRespuestaDerivadas(enviarRespuesta).subscribe((data3:any)=>{
       this.resultado=data3.respuesta
+      if(this.resultado='CORRECTA'){
+        const nuevaFecha = new Date();
+        const diferenciaMilisegundos = nuevaFecha.getTime() - this.fechaActual.getTime();
+        const diferenciaMinutos = diferenciaMilisegundos / (1000 * 60);
+        const minutosEnteros = Math.floor(diferenciaMinutos); // O Math.round(diferenciaMinutos)
+        this.tiempo = minutosEnteros;
+        alert(`Han pasado ${minutosEnteros} minutos.`);
+      }
     })
+  }
+  getFechaActual(){
+    // Simulamos una nueva hora registrada (por ejemplo, 2 horas y 30 minutos después)
+    this.fechaActual = new Date();
+    console.log(this.fechaActual)
   }
 }

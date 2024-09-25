@@ -30,6 +30,15 @@ import { CalculoEjeciciosComponent } from "./components-ejercicios/calculo-ejeci
 import { RedesNeuronalesComponent } from "./components/redes-neuronales/redes-neuronales.component";
 import { ProfesoresPanelControlComponent } from "./components-usuarios/profesores-panel-control/profesores-panel-control.component";
 import { ProfesoresArbolDecisionComponent } from "./components-usuarios/profesores-arbol-decision/profesores-arbol-decision.component";
+import { ProfesoresSingUpComponent } from "./components-usuarios/profesores-sing-up/profesores-sing-up.component";
+import { ProfesoresActividadesComponent } from "./components-usuarios/profesores-actividades/profesores-actividades.component";
+import { ProfesoresActividadesAddEditActividadesComponent } from "./components-usuarios/profesores-actividades-add-edit-actividades/profesores-actividades-add-edit-actividades.component";
+import { AlumnosSingUpComponent } from "./components-usuarios/alumnos-sing-up/alumnos-sing-up.component";
+import { AlumnosPanelControlComponent } from "./components-usuarios/alumnos-panel-control/alumnos-panel-control.component";
+import { AlumnosClasesComponent } from "./components-usuarios/alumnos-clases/alumnos-clases.component";
+import { AlumnosActividadesComponent } from "./components-usuarios/alumnos-actividades/alumnos-actividades.component";
+import { AlumnosActividadesFormComponent } from "./components-usuarios/alumnos-actividades-form/alumnos-actividades-form.component";
+import { AlumnosListCalificacionesComponent } from "./components-usuarios/alumnos-list-calificaciones/alumnos-list-calificaciones.component";
 
 const routes: Routes=[
     { path: '', component: PaginaPrincipalComponent },
@@ -56,11 +65,20 @@ const routes: Routes=[
     { path: 'calculo-teoria', component: CalculoTeoriaComponent },
     { path: 'calculo-ejercicios', component: CalculoEjeciciosComponent },
     { path: 'redes-neuronales-mainscreen', component: RedesNeuronalesComponent},
-    { path: 'panel-profesor', component: ProfesoresPanelControlComponent},
-    { path: 'profesor-arbol-decision', component: ProfesoresArbolDecisionComponent},
-    { path: 'cursos', component: ListCursosComponent },
-    { path: 'add', component: AddEditCursosComponent },
-    { path: 'edit/:codigo', component: AddEditCursosComponent },
+    { path: 'panel-profesor/:idprofesor', component: ProfesoresPanelControlComponent},
+    { path: 'profesor-arbol-decision/:idprofesor', component: ProfesoresArbolDecisionComponent},
+    { path: 'profesor-sing-up', component: ProfesoresSingUpComponent},
+    { path: 'cursos/:idprofesor', component: ListCursosComponent },
+    { path: 'add/:profesor', component: AddEditCursosComponent },
+    { path: 'edit/:profesor/:codigo', component: AddEditCursosComponent },
+    { path: 'profesor-actividades/:idprofesor', component: ProfesoresActividadesComponent},
+    { path: 'profesor-actividadesAdd', component: ProfesoresActividadesAddEditActividadesComponent},
+    { path: 'alumnos-sing-up', component:AlumnosSingUpComponent},
+    { path: 'panel-alumnos/:idalumno', component:AlumnosPanelControlComponent},
+    { path: 'alumnos-curso/:idalumno', component: AlumnosClasesComponent},
+    { path: 'alumnos-actividades/:idalumno', component: AlumnosActividadesComponent},
+    { path: 'alumnos-actividades-form/:alumno/:clase/:actividad', component: AlumnosActividadesFormComponent},
+    { path: 'alumnos-list-calificaciones/:alumno', component: AlumnosListCalificacionesComponent},
     { path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 

@@ -9,8 +9,8 @@ import { Ejercicio, EjercicioAlgebra, EjercicioDerividaras, EjercicioEcuacionesC
 })
 
 export class EjercicioService{
-    private myAppUrl: string
     private myAppUrlV2: string
+    private myAppUrl: string
     private myAPIUrl: string
 
     constructor(private http:HttpClient){
@@ -20,30 +20,30 @@ export class EjercicioService{
     }
 
     getEjericio():Observable<Ejercicio[]>{
-        return this.http.get<Ejercicio[]>(this.myAppUrl+this.myAPIUrl+'/criterios')
+        return this.http.get<Ejercicio[]>(this.myAppUrlV2+this.myAPIUrl+'/criterios')
     }
 
     getEjercicioEcuacionesCuadraticas():Observable<EjercicioEcuacionesCuadraticas[]>{
-        return this.http.get<EjercicioEcuacionesCuadraticas[]>(this.myAppUrl+this.myAPIUrl+'/ecuaciones_cuadraticas')
+        return this.http.get<EjercicioEcuacionesCuadraticas[]>(this.myAppUrlV2+this.myAPIUrl+'/ecuaciones_cuadraticas')
     }
 
     getEjerciciosTeoremaPitagoras():Observable<EjercicioTeoremaPitagoras[]>{
-        return this.http.get<EjercicioTeoremaPitagoras[]>(this.myAppUrl+this.myAPIUrl+'/teorema_pitagoras')
+        return this.http.get<EjercicioTeoremaPitagoras[]>(this.myAppUrlV2+this.myAPIUrl+'/teorema_pitagoras')
     }
 
     getEjerciciosAlgebra():Observable<EjercicioAlgebra[]>{
-        return this.http.get<EjercicioAlgebra[]>(this.myAppUrl+this.myAPIUrl+'/algebra')
+        return this.http.get<EjercicioAlgebra[]>(this.myAppUrlV2+this.myAPIUrl+'/algebra')
     }
 
     getEjerciciosFunciones():Observable<EjercicioFunciones[]>{
-        return this.http.get<EjercicioFunciones[]>(this.myAppUrl+this.myAPIUrl+'/funciones')
+        return this.http.get<EjercicioFunciones[]>(this.myAppUrlV2+this.myAPIUrl+'/funciones')
     }
 
     getEjerciciosTrigonometria():Observable<EjercicioTrigonometria[]>{
-        return this.http.get<EjercicioTrigonometria[]>(this.myAppUrl+this.myAPIUrl+'/trigonometria')
+        return this.http.get<EjercicioTrigonometria[]>(this.myAppUrlV2+this.myAPIUrl+'/trigonometria')
     }
 
     getEjerciciosDerivadas():Observable<EjercicioDerividaras[]>{
-        return this.http.get<EjercicioDerividaras[]>(this.myAppUrl+this.myAPIUrl+'/calculo')
+        return this.http.get<EjercicioDerividaras[]>(this.myAppUrlV2+this.myAPIUrl+'/calculo')
     }
 }

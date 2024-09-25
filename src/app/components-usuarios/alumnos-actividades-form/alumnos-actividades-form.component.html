@@ -1,0 +1,67 @@
+<div class="card mt-3">
+    <h1>REALIZAR ACTIVIDADES</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <form [formGroup]="formPreguntas">
+                <input formControlName="pregunta1" class="form-control mt-2">
+                <input formControlName="pregunta2" class="form-control mt-2">
+                <input formControlName="pregunta3" class="form-control mt-2">
+                <input formControlName="pregunta4" class="form-control mt-2">
+                <input formControlName="pregunta5" class="form-control mt-2">
+                <input formControlName="pregunta6" class="form-control mt-2">
+                <input formControlName="pregunta7" class="form-control mt-2">
+                <input formControlName="pregunta8" class="form-control mt-2">
+                <input formControlName="pregunta9" class="form-control mt-2">
+                <input formControlName="pregunta10" class="form-control mt-2">
+                <h2 class="mt-3">CANTIDAD DE ACIERTOS: {{aciertos}}</h2>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <form [formGroup]="formRespuestas" (ngSubmit)="EnviarRespuestas()">
+                <input formControlName="respuesta1" class="form-control mt-2">
+                <span *ngIf="formRespuestas.get('respuesta1')?.hasError('required') && formRespuestas.get('respuesta1')?.touched">
+                    <strong>No olvides colocar la respuesta....</strong>
+                </span>
+                <input formControlName="respuesta2" class="form-control mt-2">
+                <span *ngIf="formRespuestas.get('respuesta2')?.hasError('required') && formRespuestas.get('respuesta2')?.touched">
+                    <strong>No olvides colocar la respuesta....</strong>
+                </span>
+                <input formControlName="respuesta3" class="form-control mt-2">
+                <span *ngIf="formRespuestas.get('respuesta3')?.hasError('required') && formRespuestas.get('respuesta3')?.touched">
+                    <strong>No olvides colocar la respuesta....</strong>
+                </span>
+                <input formControlName="respuesta4" class="form-control mt-2">
+                <span *ngIf="formRespuestas.get('respuesta4')?.hasError('required') && formRespuestas.get('respuesta4')?.touched">
+                    <strong>No olvides colocar la respuesta....</strong>
+                </span>
+                <input formControlName="respuesta5" class="form-control mt-2">
+                <span *ngIf="formRespuestas.get('respuesta5')?.hasError('required') && formRespuestas.get('respuesta5')?.touched">
+                    <strong>No olvides colocar la respuesta....</strong>
+                </span>
+                <input formControlName="respuesta6" class="form-control mt-2">
+                <span *ngIf="formRespuestas.get('respuesta6')?.hasError('required') && formRespuestas.get('respuesta6')?.touched">
+                    <strong>No olvides colocar la respuesta....</strong>
+                </span>
+                <input formControlName="respuesta7" class="form-control mt-2">
+                <span *ngIf="formRespuestas.get('respuesta7')?.hasError('required') && formRespuestas.get('respuesta7')?.touched">
+                    <strong>No olvides colocar la respuesta....</strong>
+                </span>
+                <input formControlName="respuesta8" class="form-control mt-2">
+                <span *ngIf="formRespuestas.get('respuesta8')?.hasError('required') && formRespuestas.get('respuesta8')?.touched">
+                    <strong>No olvides colocar la respuesta....</strong>
+                </span>
+                <input formControlName="respuesta9" class="form-control mt-2">
+                <span *ngIf="formRespuestas.get('respuesta9')?.hasError('required') && formRespuestas.get('respuesta9')?.touched">
+                    <strong>No olvides colocar la respuesta....</strong>
+                </span>
+                <input formControlName="respuesta10" class="form-control mt-2">
+                <span *ngIf="formRespuestas.get('respuesta10')?.hasError('required') && formRespuestas.get('respuesta10')?.touched">
+                    <strong class="mb-2">No olvides colocar la respuesta....</strong>
+                </span>
+                <div>
+                    <button type="submit" class="btn btn-outline-success mt-3">ENVIAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

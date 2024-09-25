@@ -8,22 +8,22 @@ import { Curso } from '../interfaces/curso';
   providedIn: 'root'
 })
 export class CursoService {
-  private myAppUrl: string
+  //private myAppUrl: string
   private myAppUrlV2: string
   private myAPIUrl: string
 
   constructor(private http:HttpClient) { 
-    this.myAppUrl=environment.endpoint;
+    //this.myAppUrlV2=environment.endpoint;
     this.myAppUrlV2=environment.endpointPythonAnyWhere;
     this.myAPIUrl="api/cursos/";
   }
 
-  getListCursos(): Observable<Curso[]>{
+  getListCursos(id:number): Observable<Curso[]>{
     //return this.http.get<Curso[]>(this.myAppUrl+this.myAPIUrl+'listar')
-    return this.http.get<Curso[]>(this.myAppUrlV2+this.myAPIUrl+'listar');
+    return this.http.get<Curso[]>(this.myAppUrlV2+this.myAPIUrl+'listar/'+id);
   }
 
-  deleteCursos(codigo:String):Observable<void>{
+  deleteCursos(codigo:number):Observable<void>{
     return this.http.delete<void>(this.myAppUrlV2+this.myAPIUrl+'eliminar/'+codigo)
   }
 
@@ -31,12 +31,12 @@ export class CursoService {
     return this.http.post<void>(this.myAppUrlV2+this.myAPIUrl+'alta',curso)
   }
 
-  getCurso(codigo:String):Observable<Curso>{
-    return this.http.get<Curso>(this.myAppUrlV2+this.myAPIUrl+'buscar/'+codigo)
+  getCurso(idCurso:Number):Observable<Curso>{
+    return this.http.get<Curso>(this.myAppUrlV2+this.myAPIUrl+'buscar/'+idCurso)
   }
 
-  updateCurso(codigo:String,curso:Curso):Observable<void>{
-    return this.http.put<void>(this.myAppUrlV2+this.myAPIUrl+'actualizar/'+codigo,curso)
+  updateCurso(id:Number,curso:Curso):Observable<void>{
+    return this.http.put<void>(this.myAppUrlV2+this.myAPIUrl+'actualizar/'+id,curso)
   }
 
 }

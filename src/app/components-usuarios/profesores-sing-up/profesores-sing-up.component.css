@@ -1,0 +1,18 @@
+.contenedor{
+    width: 95%;
+    margin: auto;
+}
+.form-singup{
+    text-align: center;
+    border: 4px solid #1e1699;
+    border-radius: 15px;
+    background: #634ccf;
+    color: aliceblue;
+    font: bold;
+}
+.btn{
+    width: 70%;
+}
+.contenedor-btn{
+    margin: auto;
+}

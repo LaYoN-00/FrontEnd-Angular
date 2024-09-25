@@ -1,0 +1,32 @@
+<div class="d-flex justify-content-center contenedor mt-3">
+    <div class="card text-white bg-primary mb-3 text-center">
+        <div class="card-header text-white text-math">
+            <h1>Bienvenido a Smarth-IaNum Estudiante</h1>
+        </div>
+        <div class="card-body">
+            <app-chatbot-interfaz></app-chatbot-interfaz>
+            <h3 class="card-text text-white text-math mt-3 mb-3">
+                Siendo Estudiante podrás matricularte a clases, y con ello realizar actividades, con las cuales
+                tu Docente podra analizar en donde tienen mas probabilidades de tener problemas y asi tener un 
+                curso más personalizado de acuerdo a sus datos (calificacion y tiempo)
+            </h3>
+            <form [formGroup]="formAlumnos" (ngSubmit)="SaveNewAlumno()">
+                <input formControlName="nombre" type="text" class="form-control form-singup mt-3" placeholder="Ingrese Su Nombre Completo">
+                <span *ngIf="formAlumnos.get('nombre')?.hasError('required') && formAlumnos.get('nombre')?.touched">
+                    <strong>NO olvide de poner su Nombre</strong>
+                </span>
+                <input formControlName="username" type="text" class="form-control form-singup mt-3" placeholder="Ingrese Su Username">
+                <span *ngIf="formAlumnos.get('username')?.hasError('required') && formAlumnos.get('username')?.touched">
+                    <strong>NO olvide de poner su Username</strong>
+                </span>
+                <input formControlName="password" type="password" class="form-control form-singup mt-3" placeholder="Ingrese Su Password">
+                <span *ngIf="formAlumnos.get('password')?.hasError('required') && formAlumnos.get('password')?.touched">
+                    <strong>NO olvide de poner su Password</strong>
+                </span>
+                <div class="col-lg-6 contenedor-btn mt-3">
+                    <button [disabled]="formAlumnos.invalid" type="submit" class="btn btn-outline-success btn-lg">ACEPTAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

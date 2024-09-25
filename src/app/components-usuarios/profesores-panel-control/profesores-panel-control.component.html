@@ -1,5 +1,18 @@
-<p>PANEL DE CONTROL DE PROFESORES</p>
-
-<button>CLASES</button>
-<button>ACTIVIDADES</button>
-<button type="button" class="" routerLink="/profesor-arbol-decision">ARBOL DE DECISION</button>
+<div class="card text-white bg-info mt-3">
+    <div class="card-header">
+        <h1>Panel De Control De Docentes</h1>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn" routerLink="/cursos/{{IDprofesor}}">CLASES</button>
+            </div>
+            <div class="col-md-4">
+                <button class="btn" routerLink="/profesor-actividades/{{IDprofesor}}">ACTIVIDADES</button>
+            </div>
+            <div class="col-md-4">
+                <button type="button" class="btn" routerLink="/profesor-arbol-decision/{{IDprofesor}}">ARBOL DE DECISION</button>
+            </div>
+        </div>
+    </div>
+</div>

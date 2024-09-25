@@ -1,0 +1,24 @@
+.contenedor{
+    width: 95%;
+    margin: auto;
+}
+.text-math{
+    font-family: 'math';
+}
+.form-loggin{
+    text-align: center;
+    border: 4px solid #1e1699;
+    border-radius: 15px;
+    background: #634ccf;
+    color: aliceblue;
+    font: bold;
+}
+.imagenes-phone{
+    margin: auto;
+    width: 85%;
+    height: 70%;
+}
+.btn{
+    width: 75%;
+    font-size: small;
+}

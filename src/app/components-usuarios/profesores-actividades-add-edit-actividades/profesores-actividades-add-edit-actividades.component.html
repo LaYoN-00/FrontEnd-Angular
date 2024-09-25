@@ -1,0 +1,56 @@
+<p>Diego Salvador Mercado Cruz</p>
+<div class="row mt-3">
+    <div class="col-log-4 offset-lg-4">
+        <div class="card text-center text-dark">
+            <div class="card-header">{{operacion}} ACTIVIDADES</div>
+            <div class="card-body">
+                <form [formGroup]="formActividades" (ngSubmit)="addActividades()">
+                    <input formControlName="profesor" type="text" class="form-control mt-3 text-center" placeholder="Nombre del Docente">
+                    <input formControlName="clase" type="text" class="form-control mt-3 text-center" placeholder="Codigo de Clase">
+                    <input formControlName="Newactividad" type="text" class="form-control mt-3 text-center" placeholder="Nombre de la Actividad">
+                    <div class="row">
+                        <div class="col"><input formControlName="inciso1" type="text" class="form-control mt-3" placeholder="Ejercicio 1"></div>
+                        <div class="col"><input formControlName="respuesta1" type="text" class="form-control mt-3" placeholder="Respuesta 1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><input formControlName="inciso2" type="text" class="form-control mt-3" placeholder="Ejercicio 2"></div>
+                        <div class="col"><input formControlName="respuesta2" type="text"  class="form-control mt-3" placeholder="Respuesta 2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><input formControlName="inciso3" type="text" class="form-control mt-3" placeholder="Ejercicio 3"></div>
+                        <div class="col"><input formControlName="respuesta3" type="text" class="form-control mt-3" placeholder="Respuesta 3"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><input formControlName="inciso4" type="text"  class="form-control mt-3" placeholder="Ejercicio 4"></div>
+                        <div class="col"><input formControlName="respuesta4" type="text" class="form-control mt-3" placeholder="Respuesta 4"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><input formControlName="inciso5" type="text" class="form-control mt-3" placeholder="Ejercicio 5"></div>
+                        <div class="col"><input formControlName="respuesta5" type="text" class="form-control mt-3" placeholder="Respuesta 5"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><input formControlName="inciso6" type="text"  class="form-control mt-3" placeholder="Ejercicio 6"></div>
+                        <div class="col"><input formControlName="respuesta6" type="text" class="form-control mt-3" placeholder="Respuesta 6"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><input formControlName="inciso7" type="text" class="form-control mt-3" placeholder="Ejercicio 7"></div>
+                        <div class="col"><input formControlName="respuesta7" type="text"  class="form-control mt-3" placeholder="Respuesta 7"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><input formControlName="inciso8" type="text" class="form-control mt-3" placeholder="Ejercicio 8"></div>
+                        <div class="col"><input formControlName="respuesta8" type="text" class="form-control mt-3" placeholder="Respuesta 8"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><input formControlName="inciso9" type="text" class="form-control mt-3" placeholder="Ejercicio 9"></div>
+                        <div class="col"><input formControlName="respuesta9" type="text" class="form-control mt-3" placeholder="Respuesta 9"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><input formControlName="inciso10" type="text" class="form-control mt-3" placeholder="Ejercicio 10"></div>
+                        <div class="col"><input formControlName="respuesta10" type="text" class="form-control mt-3" placeholder="Respuesta 10"></div>
+                    </div>
+                    <button type="submit" class="btn mt-3">Enviar</button>  
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

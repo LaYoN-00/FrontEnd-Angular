@@ -1,25 +1,11 @@
 <div class="contenedor mt-3 text-dark">
     <div class="text-center">
-        <h2 class="mt-2">En este apartado podras practicar con ejercicios de Algebra y elegir dos modos</h2>
-        <h2 class="mt-2">1. Probar si sabes como resolver el ejercicio donde no se te toma el tiempo</h2>
-        <h2 class="mt-2">2. Por medio de un cronometro podras saber en cuanto tiempo puedes resolver el problema</h2>
+        <h2 class="mt-2">En este apartado podras practicar con ejercicios de Algebra</h2>
+        <h2 class="mt-2">Se te tomara el tiempo hasta que la respuesta sea correcta</h2>
     </div>
 
     <div class="row text-center fila-criterios">
-        <div class="col-md-4">
-            <button (click)="getEjercicio()" type="button" class="btn-algebra btn text-dark">Mostrar Ejercicio</button>
-        </div>
-        <div class="col-md-4">
-            <div class="form-check form-switch">
-                <input class="form-check-input switch-criterios mt-2" type="checkbox" id="flexSwitchCheckChecked" checked="">
-                <label class="form-check-label switch-criterios" for="flexSwitchCheckChecked">
-                    <h2>Cronometro</h2>
-                </label>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <button type="button" class="btn-algebra btn text-dark">Iniciar</button>
-        </div>
+        <button (click)="getEjercicio()" type="button" class="btn-algebra btn text-dark">Mostrar Ejercicio</button>
     </div>
 
     <div *ngFor="let item of ListEjercicios" class="mt-3 mb-3">
@@ -47,8 +33,11 @@
     
     <div class="row text-center fila-ecuaciones mt-3 mb-5">
         <form [formGroup]="formRespuesta" (ngSubmit)="getEvaluacion()">
-            <input formControlName="respuesta" type="text" class="form-control input-ecuaciones text-center text-dark" placeholder="Coloca tu resultado">
-            <button type="submit" class="btn-criterios btn">Evaluar</button>
+            <input formControlName="respuesta" type="text" class="form-control input-criterios text-center text-dark" placeholder="Coloca tu resultado">
+            <span *ngIf="formRespuesta.get('respuesta')?.hasError('required') && formRespuesta.get('respuesta')?.touched">
+                <strong>NO OLVIDES MANDAR TU RESPUESTA</strong>
+            </span>
+            <button [disabled]="formRespuesta.invalid" type="submit" class="btn-algebra btn">EVALUAR RESPUESTA</button>
             <div class="text-center">
                 <h2 class="mt-2">{{resultado}}</h2>
             </div>
