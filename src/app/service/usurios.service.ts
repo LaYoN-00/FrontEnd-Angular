@@ -11,13 +11,13 @@ import { Calificaciones } from "../interfaces/interfaces";
 })
 
 export class UsuariosService{
-    //private myAppUrl: string
+    private myAppUrl: string
     private myAppUrlV2: string
     private myAPIUrl: string
     private myAPIUrlV2: string
     
     constructor(private http:HttpClient){
-        //this.myAppUrl=environment.endpoint;
+        this.myAppUrl=environment.endpoint;
         this.myAppUrlV2=environment.endpointPythonAnyWhere;
         this.myAPIUrl="api/maestros/";
         this.myAPIUrlV2="api/alumnos/";
@@ -50,6 +50,14 @@ export class UsuariosService{
     //http://127.0.0.1:5000/api/alumnos/calificaciones/2
     ListarCalificacionesUsuarios(alumno:number):Observable<Calificaciones[]>{
         return this.http.get<Calificaciones[]>(this.myAppUrlV2+this.myAPIUrlV2+'/calificaciones/'+alumno)
+    }
+
+    ConfirmacionMaestros(id:number):Observable<void>{
+        return this.http.get<void>(this.myAppUrl+this.myAPIUrl+'/confirmacion/'+id)
+    }
+
+    ConfirmacionAlumnos(id:number):Observable<void>{
+        return this.http.get<void>(this.myAppUrl+this.myAPIUrlV2+'/confirmacion/'+id)
     }
 
 }

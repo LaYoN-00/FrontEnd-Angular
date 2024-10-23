@@ -1,30 +1,33 @@
-<div class="d-flex justify-content-center contenedor mt-3">
-    <div class="card text-white bg-info mb-3 text-center">
-        <div class="card-header text-white text-math">
-            <h1>Bienvenido a Smarth-IaNum Docente</h1>
+<div class="contenedor mt-3">
+    <app-chatbot-interfaz></app-chatbot-interfaz>
+    <div class="card-loggin bg-info text-center">
+        <div class="card-header bg-primary">
+            <h1 class="text-math text-white">Bienvenido a Smarth-IaNum Docente</h1>
         </div>
-        <div class="card-body">
-            <app-chatbot-interfaz></app-chatbot-interfaz>
-            <h3 class="card-text text-dark text-math mt-3 mb-3">
+        <div class="card-body p-5">
+            <h2 class="text-center mb-5 text-dark">
                 Siendo Docente podrás crear clases, y con ello crear actividades, con las cuales
                 tendras acceso a un arbol de decision para predecir en donde tus alumnos podrian
                 tener problemas
-            </h3>
+            </h2>
             <form [formGroup]="formProfesores" (ngSubmit)="SaveNewProfesor()">
-                <input formControlName="nombre" type="text" class="form-control form-singup mt-3" placeholder="Ingrese Su Nombre Completo">
+                <input formControlName="nombre" type="text" class="form-control form-loggin mt-3" placeholder="Ingrese Su Nombre Completo">
                 <span *ngIf="formProfesores.get('nombre')?.hasError('required') && formProfesores.get('nombre')?.touched">
-                    <strong>NO olvide de poner su Nombre</strong>
+                    <strong class="text-white">NO olvide de poner su Nombre</strong>
                 </span>
-                <input formControlName="username" type="text" class="form-control form-singup mt-3" placeholder="Ingrese Su Username">
+                <span *ngIf="formProfesores.get('nombre')?.hasError('pattern') && formProfesores.get('nombre')?.touched">
+                    <strong class="text-white">Creo que hay un simbolo o un numero en el apartado de Nombre</strong>
+                </span>
+                <input formControlName="username" type="text" class="form-control form-loggin mt-3" placeholder="Ingrese Su Username">
                 <span *ngIf="formProfesores.get('username')?.hasError('required') && formProfesores.get('username')?.touched">
-                    <strong>NO olvide de poner su Username</strong>
+                    <strong class="text-white">NO olvide de poner su Username</strong>
                 </span>
-                <input formControlName="password" type="password" class="form-control form-singup mt-3" placeholder="Ingrese Su Password">
+                <input formControlName="password" type="password" class="form-control form-loggin mt-3" placeholder="Ingrese Su Password">
                 <span *ngIf="formProfesores.get('password')?.hasError('required') && formProfesores.get('password')?.touched">
-                    <strong>NO olvide de poner su Password</strong>
+                    <strong class="text-white">NO olvide de poner su Password</strong>
                 </span>
                 <div class="col-lg-6 contenedor-btn mt-3">
-                    <button [disabled]="formProfesores.invalid" type="submit" class="btn btn-outline-success btn-lg">ACEPTAR</button>
+                    <button [disabled]="formProfesores.invalid" type="submit" class="btn btn-success btn-lg">ACEPTAR</button>
                 </div>
             </form>
         </div>

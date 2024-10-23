@@ -1,35 +1,55 @@
-<div class="row mt-5">
-    <div class="">
-        <div class="card text-white bg-info mb-3">
-            <div class="card-header text-center">{{operacion}} CURSO</div>
-            <div class="card-body">
-                <form [formGroup]="form" (ngSubmit)="addCurso()">
-                    <input formControlName="profesor" [readonly]="true" type="text" class="form-control mt-3" placeholder="Ingrese Profesor de Grupo">
-                    <span *ngIf="form.get('profesor')?.hasError('required') && form.get('profesor')?.touched">
-                        <strong>El Campo Profesor Es Requerido</strong>
-                    </span>
-                    <input formControlName="codigo" type="text" class="form-control mt-3" placeholder="Ingrese Codigo de Grupo">
-                    <span *ngIf="form.get('codigo')?.hasError('required') && form.get('codigo')?.touched">
-                        <strong>El Campo Codigo Es Requerido</strong>
-                    </span>
-                    <input formControlName="nombre" type="text" class="form-control mt-3" placeholder="Ingrese Nombre de Grupo">
-                    <span *ngIf="form.get('nombre')?.hasError('required') && form.get('nombre')?.touched">
-                        <strong>El Campo Nombre Es Requerido</strong>
-                    </span>
-                    <input formControlName="creditos" type="number" class="form-control mt-3" placeholder="Ingrese Creditos de Grupo">
-                    <span *ngIf="form.get('creditos')?.hasError('required') && form.get('creditos')?.touched">
-                        <strong>El Campo Creditos Es Requerido</strong>
-                    </span>
-                    <div class="row mt-2 text-center">
-                        <div class="col-lg-6">
-                            <button [disabled]="form.invalid" type="submit" class="btn btn-outline-success btn-sm">ACEPTAR</button>
-                        </div>
-                        <div class="col-lg-6">
-                            <button routerLink="/cursos/{{idProfesor}}" type="button" class="btn btn-outline-danger btn-sm">VOLVER</button>
-                        </div>
-                    </div>
-                </form>
+<div class="container bg-info mt-3">
+    <h1>Formulario de Curso para {{operacion}}</h1>
+    <form [formGroup]="form" (ngSubmit)="addCurso()">
+        <div class="mb-3">
+            <label for="profesor" class="form-label">DOCENTE</label>
+            <div class="input-group">
+                <span class="input-group-text"><span class="material-symbols-outlined">patient_list</span></span>
+                <input formControlName="profesor" [readonly]="true" type="text" class="form-control" id="profesor" placeholder="Nombre del profesor" required>
             </div>
+            <span *ngIf="form.get('profesor')?.hasError('required') && form.get('profesor')?.touched">
+                <strong class="text-dark">El Campo Profesor Es Requerido</strong>
+            </span>
         </div>
-    </div>
+        
+        <div class="mb-3">
+            <label for="codigo" class="form-label">CÓDIGO</label>
+            <div class="input-group">
+                <span class="input-group-text"><span class="material-symbols-outlined">keyboard_hide</span></span>
+                <input formControlName="codigo" type="text" class="form-control" id="codigo" placeholder="Ej: CS101" required>
+            </div>
+            <span *ngIf="form.get('codigo')?.hasError('required') && form.get('codigo')?.touched">
+                <strong class="text-dark">El Campo Codigo Es Requerido</strong>
+            </span>
+        </div>
+        
+        <div class="mb-3">
+            <label for="nombre" class="form-label">NOMBRE DEL CURSO</label>
+            <div class="input-group">
+                <span class="input-group-text"><span class="material-symbols-outlined">book_6</span></span>
+                <input formControlName="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre del curso" required>
+            </div>
+            <span *ngIf="form.get('nombre')?.hasError('required') && form.get('nombre')?.touched">
+                <strong class="text-dark">El Campo Nombre Es Requerido</strong>
+            </span>
+        </div>
+        
+        <div class="mb-3">
+            <label for="creditos" class="form-label">CRÉDITOS</label>
+            <div class="input-group">
+                <span class="input-group-text"><span class="material-symbols-outlined">scoreboard</span></span>
+                <input formControlName="creditos" type="number" class="form-control credits-input" id="creditos" placeholder="Ej: 3" min="1" max="10" required>
+            </div>
+            <span *ngIf="form.get('creditos')?.hasError('required') && form.get('creditos')?.touched">
+                <strong class="text-dark">El Campo Creditos Es Requerido</strong>
+            </span>
+        </div>
+        
+        <button [disabled]="form.invalid" type="submit" class="btn btn-submit btn-block w-100">
+            <i class="fas fa-save me-2"></i>Guardar Curso
+        </button>
+    </form>
+    <button routerLink="/cursos/{{idProfesor}}" type="button" class="btn btn-return btn-block w-100">
+        <i class="fas fa-save me-2"></i>Regresar
+    </button>
 </div>

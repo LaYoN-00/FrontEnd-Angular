@@ -16,3 +16,35 @@
 .contenedor-btn{
     margin: auto;
 }
+/********************************************************************/
+.contenedor{
+    width: 80%;
+    margin: auto;
+}
+.card-loggin{
+    border-radius: 1rem;
+}
+.text-math{
+    font-family: 'math';
+}
+.imagenes{
+    margin: auto;
+    width: 25%;
+    height: 25%;
+}
+.form-loggin{
+    text-align: center;
+    border: 4px solid #1e1699;
+    border-radius: 15px;
+    background: #634ccf;
+    color: aliceblue;
+    font: bold;
+}
+.form-loggin:hover{
+    background: #8b7fc0;
+    color: aliceblue;
+}
+.btn{
+    width: 75%;
+    font-size: small;
+}

@@ -1,10 +1,32 @@
-.card{
+.card {
     width: 95%;
-    margin: auto;
+    margin: 2rem auto; /* Añade espacio vertical y centra horizontalmente */
+    padding: 1.5rem; /* Añade espacio interno */
     text-align: center;
     font-family: 'math';
+    background-color: #38aba2; /* Añade un fondo blanco */
+    border-radius: 8px; /* Añade esquinas redondeadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil */
 }
 
-.form-control{
+.form-control {
     text-align: center;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    padding: 0.75rem; /* Añade espacio interno */
+    margin-bottom: 1rem; /* Añade espacio entre elementos del formulario */
+    border: 5px solid #ffffff; /* Añade un borde sutil */
+    border-radius: 8px; /* Esquinas redondeadas para los inputs */
+    font-size: 1.3rem; /* Tamaño de fuente legible */
+    background-color: #38bbb0;
+}
+
+/* Estilo adicional para mejorar la interactividad */
+.form-control:focus {
+    outline: none;
+    border-color: #1b534f; /* Cambia el color del borde al enfocar */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Añade un resplandor sutil al enfocar */
+}
+
+.btn{
+    width: 100%;
 }

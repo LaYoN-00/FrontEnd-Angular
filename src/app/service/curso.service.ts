@@ -2,18 +2,18 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/enviroment';
-import { Curso } from '../interfaces/curso';
+import { Curso, CursoCodigo } from '../interfaces/curso';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CursoService {
-  //private myAppUrl: string
+  private myAppUrl: string
   private myAppUrlV2: string
   private myAPIUrl: string
 
   constructor(private http:HttpClient) { 
-    //this.myAppUrlV2=environment.endpoint;
+    this.myAppUrl=environment.endpoint;
     this.myAppUrlV2=environment.endpointPythonAnyWhere;
     this.myAPIUrl="api/cursos/";
   }
@@ -37,6 +37,11 @@ export class CursoService {
 
   updateCurso(id:Number,curso:Curso):Observable<void>{
     return this.http.put<void>(this.myAppUrlV2+this.myAPIUrl+'actualizar/'+id,curso)
+  }
+
+  getCodigos(id:Number):Observable<CursoCodigo[]>{
+    //http://127.0.0.1:5000/api/cursos/codigos/5
+    return this.http.get<CursoCodigo[]>(this.myAppUrl+this.myAPIUrl+'codigos/'+id)
   }
 
 }

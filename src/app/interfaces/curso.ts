@@ -11,3 +11,7 @@ export interface CursoMatricula{
     idcurso:number,
     idalumno:number
 }
+
+export interface CursoCodigo{
+    codigo: string,
+}

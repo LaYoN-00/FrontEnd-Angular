@@ -20,11 +20,6 @@ export class AlumnosActividadesComponent {
   getActividades(){
     this._actividadesService.getListarActividadesAlumnos(this.IDalumno).subscribe((data:AlumnosActividades[])=>{
       this.ListActividades=data;
-      console.log(this.ListActividades)
     })
-  }
-  RealizarActividad(Clase:string,actividad:string){
-    console.log(Clase)
-    console.log(actividad)
   }
 }

@@ -44,7 +44,6 @@ export class CriteriosDivisibilidadEjeciciosComponent {
 
   getOpcionesRespuestas(IDejercicio:number){
     this._respuestaService.getOpcionesRespuestasCriterios(IDejercicio).subscribe((data2:OpcionesRespuestas)=>{
-      console.log(data2)
       this.form.setValue({
         opcionA:data2.opcion_a,
         opcionB:data2.opcion_b,
@@ -61,7 +60,7 @@ export class CriteriosDivisibilidadEjeciciosComponent {
     }
     this._enviarRespuestas.postRespuestaCriterios(enviarRespuesta).subscribe((data3:any)=>{
       this.resultado=data3.respuesta
-      if(this.resultado='CORRECTA'){
+      if(this.resultado=='CORRECTA'){
         const nuevaFecha = new Date();
         const diferenciaMilisegundos = nuevaFecha.getTime() - this.fechaActual.getTime();
         const diferenciaMinutos = diferenciaMilisegundos / (1000 * 60);
@@ -69,13 +68,15 @@ export class CriteriosDivisibilidadEjeciciosComponent {
         this.tiempo = minutosEnteros;
         alert(`Han pasado ${minutosEnteros} minutos.`);
       }
+      if(this.resultado=='INCORRECTA'){
+        console.log("Sigue intentando")
+      }
     })
   }
 
   getFechaActual(){
     // Simulamos una nueva hora registrada (por ejemplo, 2 horas y 30 minutos después)
     this.fechaActual = new Date();
-    console.log(this.fechaActual)
   }
 
 }

@@ -1,30 +1,26 @@
 <div class="contenedor mt-3">
-    <div class="card text-white bg-info mb-3 text-center">
-        <div class="card-header text-white text-math">
-            <h1>Bienvenido a Smarth-IaNum Docente</h1>
+    <app-chatbot-interfaz></app-chatbot-interfaz>
+    <div class="card-loggin bg-info text-center">
+        <div class="card-header bg-primary">
+            <h1 class="text-math text-white">Bienvenido a Smarth-IaNum Docente</h1>
         </div>
-        <div class="card-body">
-            <app-chatbot-interfaz></app-chatbot-interfaz>
-            <div class="row">
-                <div class="col-6">
-                    <img src="assets/imagenes/maestro.png" class="imagenes-phone img-fluid d-block m-3">
-                </div>
-                <div class="col-6 mt-3">
-                    <h3 class="card-text text-dark text-math mb-5">Recuerda que si no tienes una cuenta puedes crear una dandole click al boton de abajo</h3>
-                    <form [formGroup]="formLogin" (ngSubmit)="Loggin()">
-                        <input formControlName="username" type="text" class="form-control form-loggin mt-3" placeholder="Ingrese Su Username">
-                        <span *ngIf="formLogin.get('username')?.hasError('required') && formLogin.get('username')?.touched">
-                            <strong>NO olvide de poner su Username</strong>
-                        </span>
-                        <input formControlName="password" type="password" class="form-control form-loggin mt-3" placeholder="Ingrese Su Password">
-                        <span *ngIf="formLogin.get('password')?.hasError('required') && formLogin.get('password')?.touched">
-                            <strong>NO olvide de poner su Password</strong>
-                        </span>
-                        <button [disabled]="formLogin.invalid" type="submit" class="btn btn-success btn-lg mt-3 mb-2">ACEPTAR</button>
-                    </form>
-                    <button routerLink="/profesor-sing-up" class="btn btn-outline-danger btn-lg">REGISTRAR</button>
-                </div>
-              </div>
+        <div class="card-body p-5">
+            <div class="mb-4 text-center">
+                <img src="assets/imagenes/maestro.png" alt="Login Image" class="img-fluid rounded-circle imagenes">
+            </div>
+            <h2 class="text-center mb-5 text-dark">Recuerda que si no tienes una cuenta puedes crear una dandole click al boton de abajo</h2>
+            <form [formGroup]="formLogin" (ngSubmit)="Loggin()">
+                <input formControlName="username" type="text" class="form-control form-loggin mt-3" placeholder="Ingrese Su Username">
+                <span *ngIf="formLogin.get('username')?.hasError('required') && formLogin.get('username')?.touched">
+                    <strong class="text-white">NO olvide de poner su Username</strong>
+                </span>
+                <input formControlName="password" type="password" class="form-control form-loggin mt-3" placeholder="Ingrese Su Password">
+                <span *ngIf="formLogin.get('password')?.hasError('required') && formLogin.get('password')?.touched">
+                    <strong class="text-white">NO olvide de poner su Password</strong>
+                </span>
+                <button [disabled]="formLogin.invalid" type="submit" class="btn btn-success btn-lg mt-3 mb-2">ACEPTAR</button>
+            </form>
+            <button routerLink="/profesor-sing-up" class="btn btn-outline-danger btn-lg">REGISTRAR</button>
         </div>
     </div>
 </div>

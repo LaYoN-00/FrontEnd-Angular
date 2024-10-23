@@ -61,7 +61,7 @@ export class TrigonometriaEjeciciosComponent {
     }
     this._enviarRespuestas.postRespuestaTrigonometria(enviarRespuesta).subscribe((data3:any)=>{
       this.resultado=data3.respuesta
-      if(this.resultado='CORRECTA'){
+      if(this.resultado=='CORRECTA'){
         const nuevaFecha = new Date();
         const diferenciaMilisegundos = nuevaFecha.getTime() - this.fechaActual.getTime();
         const diferenciaMinutos = diferenciaMilisegundos / (1000 * 60);
@@ -69,11 +69,13 @@ export class TrigonometriaEjeciciosComponent {
         this.tiempo = minutosEnteros;
         alert(`Han pasado ${minutosEnteros} minutos.`);
       }
+      if(this.resultado=='INCORRECTA'){
+        console.log("Sigue intentando")
+      }
     })
   }
   getFechaActual(){
     // Simulamos una nueva hora registrada (por ejemplo, 2 horas y 30 minutos después)
     this.fechaActual = new Date();
-    console.log(this.fechaActual)
   }
 }

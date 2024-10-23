@@ -65,6 +65,8 @@ export interface AlumnosActividadesRespuestasForm{
 }
 
 export interface AlumnosActualizarCalificacion{
-    actividad:string
-    tiempo?:number
+    id_actividad:number,
+    id_clase:number,	
+    calificacion:number,
+    tiempo:number
 }

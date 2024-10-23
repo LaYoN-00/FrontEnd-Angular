@@ -20,7 +20,6 @@ export class AlumnosListCalificacionesComponent {
   getListCalificaciones(){
     this._usuarioService.ListarCalificacionesUsuarios(this.idAlumnos).subscribe((data:Calificaciones[])=>{
       this.ListCalificaciones=data
-      console.log(this.ListCalificaciones)
     })
   }
 }

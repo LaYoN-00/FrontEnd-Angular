@@ -15,6 +15,9 @@
                 <span *ngIf="formAlumnos.get('nombre')?.hasError('required') && formAlumnos.get('nombre')?.touched">
                     <strong>NO olvide de poner su Nombre</strong>
                 </span>
+                <span *ngIf="formAlumnos.get('nombre')?.hasError('pattern') && formAlumnos.get('nombre')?.touched">
+                    <strong class="text-white">Creo que hay un simbolo o un numero en el apartado de Nombre</strong>
+                </span>
                 <input formControlName="username" type="text" class="form-control form-singup mt-3" placeholder="Ingrese Su Username">
                 <span *ngIf="formAlumnos.get('username')?.hasError('required') && formAlumnos.get('username')?.touched">
                     <strong>NO olvide de poner su Username</strong>

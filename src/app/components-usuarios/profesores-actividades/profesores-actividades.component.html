@@ -1,20 +1,23 @@
-<div class="card mt-3">
-    <div class="title mt-3 mb-3">
-        <h4>Listado de Actividades</h4>
-        <button type="button" class="btn btn-outline-info btn-sm" routerLink="/profesor-actividadesAdd">AGREGAR</button>
+<div class="container mt-3">
+    <h1>Listado de Actividades</h1>
+    <div class="btn-group mb-3" role="group" aria-label="Acciones">
+        <button routerLink="/profesor-actividadesAdd/{{IDprofesor}}" type="button" class="btn btn-info"><i class="fas fa-plus me-2"></i>Agregar Curso</button>
+        <button routerLink="/panel-profesor/{{IDprofesor}}" type="button" class="btn btn-warning"><i class="fas fa-arrow-left me-2"></i>Volver</button>
     </div>
-    <div class="table table-hover text-center">
-        <thead>
-            <tr>
-                <th scope="col">CODIGO CLASE</th>
-                <th scope="col">NOMBRE ACTIVIDAD</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let item of listActividades">
-                <th>{{item.codigo_clase}}</th>
-                <td>{{item.nombre_actividad}}</td>
-            </tr>
-        </tbody>
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead class="text-center">
+                <tr>
+                    <th scope="col">CODIGO CLASE</th>
+                    <th scope="col">NOMBRE ACTIVIDAD</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr *ngFor="let item of listActividades">
+                    <th>{{item.codigo_clase}}</th>
+                    <td>{{item.nombre_actividad}}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

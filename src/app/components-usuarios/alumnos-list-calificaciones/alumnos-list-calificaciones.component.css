@@ -1,11 +1,41 @@
-.title{
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    margin: auto;
+.container {
+    background-color: #848b20;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
 }
-.card{
-    width: 90%;
-    margin: auto;
+h1{
+    color: #ffffff;
+    font-weight: 600;
     font-family: 'math';
+    margin-bottom: 30px;
+    text-align: center;
+}
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+.table th{
+    vertical-align: middle;
+    background-color: #616348;
+}
+.table td {
+    vertical-align: middle;
+    background-color: #d1d49a;
+}
+.btn-group {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.btn-group .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.credits-badge {
+    background-color: #868d03;
+    color: #000000;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
 }

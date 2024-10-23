@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UsuariosService } from 'src/app/service/usurios.service';
 
 @Component({
   selector: 'app-profesores-panel-control',
@@ -8,8 +9,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProfesoresPanelControlComponent {
   public IDprofesor:number;
-  constructor(private aRouter:ActivatedRoute){
+  constructor(private aRouter:ActivatedRoute,private _UsuariosService:UsuariosService,private router:Router){
     this.IDprofesor=Number(aRouter.snapshot.paramMap.get('idprofesor'))
-    console.log(this.IDprofesor)
+  }
+  ngOnInit():void{
+    this._UsuariosService.ConfirmacionMaestros(this.IDprofesor).subscribe((data:any)=>{
+      if(data.confirmacion=='False'){
+        this.router.navigate(['/#']);
+      }
+    })
   }
 }

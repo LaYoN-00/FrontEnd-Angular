@@ -1,56 +1,140 @@
-<p>Diego Salvador Mercado Cruz</p>
-<div class="row mt-3">
-    <div class="col-log-4 offset-lg-4">
-        <div class="card text-center text-dark">
-            <div class="card-header">{{operacion}} ACTIVIDADES</div>
-            <div class="card-body">
-                <form [formGroup]="formActividades" (ngSubmit)="addActividades()">
-                    <input formControlName="profesor" type="text" class="form-control mt-3 text-center" placeholder="Nombre del Docente">
-                    <input formControlName="clase" type="text" class="form-control mt-3 text-center" placeholder="Codigo de Clase">
-                    <input formControlName="Newactividad" type="text" class="form-control mt-3 text-center" placeholder="Nombre de la Actividad">
-                    <div class="row">
-                        <div class="col"><input formControlName="inciso1" type="text" class="form-control mt-3" placeholder="Ejercicio 1"></div>
-                        <div class="col"><input formControlName="respuesta1" type="text" class="form-control mt-3" placeholder="Respuesta 1"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col"><input formControlName="inciso2" type="text" class="form-control mt-3" placeholder="Ejercicio 2"></div>
-                        <div class="col"><input formControlName="respuesta2" type="text"  class="form-control mt-3" placeholder="Respuesta 2"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col"><input formControlName="inciso3" type="text" class="form-control mt-3" placeholder="Ejercicio 3"></div>
-                        <div class="col"><input formControlName="respuesta3" type="text" class="form-control mt-3" placeholder="Respuesta 3"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col"><input formControlName="inciso4" type="text"  class="form-control mt-3" placeholder="Ejercicio 4"></div>
-                        <div class="col"><input formControlName="respuesta4" type="text" class="form-control mt-3" placeholder="Respuesta 4"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col"><input formControlName="inciso5" type="text" class="form-control mt-3" placeholder="Ejercicio 5"></div>
-                        <div class="col"><input formControlName="respuesta5" type="text" class="form-control mt-3" placeholder="Respuesta 5"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col"><input formControlName="inciso6" type="text"  class="form-control mt-3" placeholder="Ejercicio 6"></div>
-                        <div class="col"><input formControlName="respuesta6" type="text" class="form-control mt-3" placeholder="Respuesta 6"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col"><input formControlName="inciso7" type="text" class="form-control mt-3" placeholder="Ejercicio 7"></div>
-                        <div class="col"><input formControlName="respuesta7" type="text"  class="form-control mt-3" placeholder="Respuesta 7"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col"><input formControlName="inciso8" type="text" class="form-control mt-3" placeholder="Ejercicio 8"></div>
-                        <div class="col"><input formControlName="respuesta8" type="text" class="form-control mt-3" placeholder="Respuesta 8"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col"><input formControlName="inciso9" type="text" class="form-control mt-3" placeholder="Ejercicio 9"></div>
-                        <div class="col"><input formControlName="respuesta9" type="text" class="form-control mt-3" placeholder="Respuesta 9"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col"><input formControlName="inciso10" type="text" class="form-control mt-3" placeholder="Ejercicio 10"></div>
-                        <div class="col"><input formControlName="respuesta10" type="text" class="form-control mt-3" placeholder="Respuesta 10"></div>
-                    </div>
-                    <button type="submit" class="btn mt-3">Enviar</button>  
-                </form>
+<div class="container form-container">
+    <h2 class="mb-4 text-dark">Agregar Nueva Actividad</h2>
+    <form [formGroup]="formActividades" (ngSubmit)="addActividades()">
+        <div class="mb-3">
+            <label class="form-label">Nombre del Docente</label>
+            <input formControlName="profesor" [readonly]="true" type="text" class="form-control mt-3 text-center">
+        </div>
+        <div class="mb-3">
+            <label for="codigoClase" class="form-label">Código de Clase</label>
+            <span *ngIf="formActividades.get('clase')?.hasError('required') && formActividades.get('clase')?.touched">
+                <strong class="form-label">: No olvides el CODIGO de la Actividad</strong>
+            </span>
+            <select formControlName="clase" type="text" class="form-control mt-3 text-center form-select">
+                <option *ngFor="let item of Codigos">
+                    {{item.codigo}}
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="nombreActividad" class="form-label">Nombre de la Actividad</label>
+            <span *ngIf="formActividades.get('Newactividad')?.hasError('required') && formActividades.get('Newactividad')?.touched">
+                <strong class="form-label">: No olvides el NOMBRE de la Actividad</strong>
+            </span>
+            <input formControlName="Newactividad" type="text" class="form-control mt-3 text-center">
+        </div>
+
+        <h3 class="mt-4 mb-3 text-dark">Preguntas y Respuestas</h3>
+        
+        <div class="pregunta-respuesta">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Pregunta 1</label>
+                    <span *ngIf="formActividades.get('inciso1')?.hasError('required') && formActividades.get('inciso1')?.touched">
+                        <strong class="form-label">: No olvides la preguta</strong>
+                    </span>
+                    <input formControlName="inciso1" type="text" class="form-control mt-3">
+                    <label class="form-label mt-3">Pregunta 2</label>
+                    <span *ngIf="formActividades.get('inciso2')?.hasError('required') && formActividades.get('inciso2')?.touched">
+                        <strong class="form-label">: No olvides la preguta</strong>
+                    </span>
+                    <input formControlName="inciso2" type="text" class="form-control mt-3">
+                    <label class="form-label">Pregunta 3</label>
+                    <span *ngIf="formActividades.get('inciso3')?.hasError('required') && formActividades.get('inciso3')?.touched">
+                        <strong class="form-label">: No olvides la preguta</strong>
+                    </span>
+                    <input formControlName="inciso3" type="text" class="form-control mt-3">
+                    <label class="form-label">Pregunta 4</label>
+                    <span *ngIf="formActividades.get('inciso4')?.hasError('required') && formActividades.get('inciso4')?.touched">
+                        <strong class="form-label">: No olvides la preguta</strong>
+                    </span>
+                    <input formControlName="inciso4" type="text" class="form-control mt-3">
+                    <label class="form-label">Pregunta 5</label>
+                    <span *ngIf="formActividades.get('inciso5')?.hasError('required') && formActividades.get('inciso5')?.touched">
+                        <strong class="form-label">: No olvides la preguta</strong>
+                    </span>
+                    <input formControlName="inciso5" type="text" class="form-control mt-3">
+                    <label class="form-label">Pregunta 6</label>
+                    <span *ngIf="formActividades.get('inciso6')?.hasError('required') && formActividades.get('inciso6')?.touched">
+                        <strong class="form-label">: No olvides la preguta</strong>
+                    </span>
+                    <input formControlName="inciso6" type="text" class="form-control mt-3">
+                    <label class="form-label">Pregunta 7</label>
+                    <span *ngIf="formActividades.get('inciso7')?.hasError('required') && formActividades.get('inciso7')?.touched">
+                        <strong class="form-label">: No olvides la preguta</strong>
+                    </span>
+                    <input formControlName="inciso7" type="text" class="form-control mt-3">
+                    <label class="form-label">Pregunta 8</label>
+                    <span *ngIf="formActividades.get('inciso8')?.hasError('required') && formActividades.get('inciso8')?.touched">
+                        <strong class="form-label">: No olvides la preguta</strong>
+                    </span>
+                    <input formControlName="inciso8" type="text" class="form-control mt-3">
+                    <label class="form-label">Pregunta 9</label>
+                    <span *ngIf="formActividades.get('inciso9')?.hasError('required') && formActividades.get('inciso9')?.touched">
+                        <strong class="form-label">: No olvides la preguta</strong>
+                    </span>
+                    <input formControlName="inciso9" type="text" class="form-control mt-3">
+                    <label class="form-label">Pregunta 10</label>
+                    <span *ngIf="formActividades.get('inciso10')?.hasError('required') && formActividades.get('inciso10')?.touched">
+                        <strong class="form-label">: No olvides la preguta</strong>
+                    </span>
+                    <input formControlName="inciso10" type="text" class="form-control mt-3">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Respuesta 1</label>
+                    <span *ngIf="formActividades.get('respuesta1')?.hasError('required') && formActividades.get('respuesta1')?.touched">
+                        <strong class="form-label">: No olvides la Respuesta</strong>
+                    </span>
+                    <input formControlName="respuesta1" type="text" class="form-control mt-3 mb-3">
+                    <label class="form-label">Respuesta 2</label>
+                    <span *ngIf="formActividades.get('respuesta2')?.hasError('required') && formActividades.get('respuesta2')?.touched">
+                        <strong class="form-label">: No olvides la Respuesta</strong>
+                    </span>
+                    <input formControlName="respuesta2" type="text" class="form-control mt-3">
+                    <label class="form-label">Respuesta 3</label>
+                    <span *ngIf="formActividades.get('respuesta3')?.hasError('required') && formActividades.get('respuesta3')?.touched">
+                        <strong class="form-label">: No olvides la Respuesta</strong>
+                    </span>
+                    <input formControlName="respuesta3" type="text" class="form-control mt-3">
+                    <label class="form-label">Respuesta 4</label>
+                    <span *ngIf="formActividades.get('respuesta4')?.hasError('required') && formActividades.get('respuesta4')?.touched">
+                        <strong class="form-label">: No olvides la Respuesta</strong>
+                    </span>
+                    <input formControlName="respuesta4" type="text" class="form-control mt-3">
+                    <label class="form-label">Respuesta 5</label>
+                    <span *ngIf="formActividades.get('respuesta5')?.hasError('required') && formActividades.get('respuesta5')?.touched">
+                        <strong class="form-label">: No olvides la Respuesta</strong>
+                    </span>
+                    <input formControlName="respuesta5" type="text" class="form-control mt-3">
+                    <label class="form-label">Respuesta 6</label>
+                    <span *ngIf="formActividades.get('respuesta6')?.hasError('required') && formActividades.get('respuesta6')?.touched">
+                        <strong class="form-label">: No olvides la Respuesta</strong>
+                    </span>
+                    <input formControlName="respuesta6" type="text" class="form-control mt-3">
+                    <label class="form-label">Respuesta 7</label>
+                    <span *ngIf="formActividades.get('respuesta7')?.hasError('required') && formActividades.get('respuesta7')?.touched">
+                        <strong class="form-label">: No olvides la Respuesta</strong>
+                    </span>
+                    <input formControlName="respuesta7" type="text" class="form-control mt-3">
+                    <label class="form-label">Respuesta 8</label>
+                    <span *ngIf="formActividades.get('respuesta8')?.hasError('required') && formActividades.get('respuesta8')?.touched">
+                        <strong class="form-label">: No olvides la Respuesta</strong>
+                    </span>
+                    <input formControlName="respuesta8" type="text" class="form-control mt-3">
+                    <label class="form-label">Respuesta 9</label>
+                    <span *ngIf="formActividades.get('respuesta9')?.hasError('required') && formActividades.get('respuesta9')?.touched">
+                        <strong class="form-label">: No olvides la Respuesta</strong>
+                    </span>
+                    <input formControlName="respuesta9" type="text" class="form-control mt-3">
+                    <label class="form-label">Respuesta 10</label>
+                    <span *ngIf="formActividades.get('respuesta10')?.hasError('required') && formActividades.get('respuesta10')?.touched">
+                        <strong class="form-label">: No olvides la Respuesta</strong>
+                    </span>
+                    <input formControlName="respuesta10" type="text" class="form-control mt-3">
+                </div>
             </div>
         </div>
-    </div>
+        <button [disabled]="formActividades.invalid" type="submit" class="btn btn-success mt-4 w-100">Agregar Actividad</button>
+    </form>
+    <button  routerLink="/profesor-actividades/{{idProfesor}}" type="button" class="btn btn-danger mt-4 w-100">Volver</button>
 </div>

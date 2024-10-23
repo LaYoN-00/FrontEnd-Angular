@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActividadesService } from 'src/app/service/actividades.service';
-import { ProfesorActividadAlta, ProfesorActividades } from "src/app/interfaces/actividades";
-import { Router } from '@angular/router';
+import { ProfesorActividadAlta } from "src/app/interfaces/actividades";
+import { ActivatedRoute, Router } from '@angular/router';
+import { UsuariosService } from 'src/app/service/usurios.service';
+import { CursoService } from 'src/app/service/curso.service';
+import { CursoCodigo } from 'src/app/interfaces/curso';
 
 @Component({
   selector: 'app-profesores-actividades-add-edit-actividades',
@@ -12,7 +15,12 @@ import { Router } from '@angular/router';
 export class ProfesoresActividadesAddEditActividadesComponent {
   formActividades:FormGroup;
   operacion:String='AGREGAR';
-  constructor(private fb:FormBuilder,private _actividadService:ActividadesService,private router:Router){
+  idProfesor:number;
+  Codigos:CursoCodigo[]=[];
+  constructor(private fb:FormBuilder,private _actividadService:ActividadesService,
+    private router:Router,private aRouter:ActivatedRoute,private _usuariosService:UsuariosService,
+    private _cursosService:CursoService ){
+    this.idProfesor=Number(aRouter.snapshot.paramMap.get('idprofesor'))
     this.formActividades=this.fb.group({
       profesor: ['',Validators.required],
       clase: ['',Validators.required],
@@ -37,6 +45,47 @@ export class ProfesoresActividadesAddEditActividadesComponent {
       respuesta8: ['',Validators.required],
       respuesta9: ['',Validators.required],
       respuesta10: ['',Validators.required],
+    })
+  }
+
+  ngOnInit():void{
+    this.getListCodigos();
+    this.setData();
+  }
+
+  getListCodigos() {
+    this._cursosService.getCodigos(this.idProfesor).subscribe((data:CursoCodigo[])=>{
+      this.Codigos=data
+    });
+  }
+
+  setData(){
+    this._usuariosService.ConfirmacionMaestros(this.idProfesor).subscribe((data:any)=>{
+      this.formActividades.setValue({
+        profesor:data.confirmacion,
+        clase:"",
+        Newactividad:"",
+        inciso1:"",
+        inciso2:"",
+        inciso3:"",
+        inciso4:"",
+        inciso5:"",
+        inciso6:"",
+        inciso7:"",
+        inciso8:"",
+        inciso9:"",
+        inciso10:"",
+        respuesta1:"",
+        respuesta2:"",
+        respuesta3:"",
+        respuesta4:"",
+        respuesta5:"",
+        respuesta6:"",
+        respuesta7:"",
+        respuesta8:"",
+        respuesta9:"",
+        respuesta10:"",
+      })
     })
   }
 
@@ -67,7 +116,6 @@ export class ProfesoresActividadesAddEditActividadesComponent {
       respuesta10:this.formActividades.value.respuesta10,
     }
     this._actividadService.postActividades(newActividad).subscribe((data:any)=>{
-      console.log("Actividad Agregada")
       this.router.navigate(['/profesor-actividades/'+data.id]);
     })
   }

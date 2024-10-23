@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Curso } from 'src/app/interfaces/curso';
 import { CursoService } from 'src/app/service/curso.service';
+import { UsuariosService } from 'src/app/service/usurios.service';
 
 @Component({
   selector: 'app-add-edit-cursos',
@@ -13,9 +14,10 @@ export class AddEditCursosComponent {
   form: FormGroup;
   idCurso: Number;
   operacion: String = "AGREGAR"
-  idProfesor:Number;
+  idProfesor:number;
 
-  constructor(private fb: FormBuilder,private _cursoService: CursoService,private router:Router,private aRouter:ActivatedRoute){
+  constructor(private fb: FormBuilder,private _cursoService: CursoService,private router:Router,
+    private aRouter:ActivatedRoute,private _UsuariosService:UsuariosService){
     this.form=this.fb.group({
       codigo: ['',Validators.required],
       nombre: ['',Validators.required],
@@ -31,11 +33,20 @@ export class AddEditCursosComponent {
       this.operacion='EDITAR'
       this.getCurso(this.idCurso);
     }
+    this._UsuariosService.ConfirmacionMaestros(this.idProfesor).subscribe((data:any)=>{
+      if(data.confirmacion=='False'){
+        this.router.navigate(['/#']);
+      }
+      this.form.setValue({
+        codigo: "",
+        nombre: "",
+        creditos: "",
+        profesor: data.confirmacion
+      })
+    })
   }
 
   addCurso(){
-    //console.log("CURSO AGREGADO")
-    //console.log(this.form)
     const curso: Curso = {
       codigo: this.form.value.codigo,
       materia: this.form.value.nombre,
@@ -44,16 +55,13 @@ export class AddEditCursosComponent {
     }
 
     if(this.idCurso!=0){
-      console.log(curso)
       this._cursoService.updateCurso(this.idCurso,curso).subscribe((data:any)=>{
-        console.log("Curso Actualizado")
         this.router.navigate(['/cursos/'+data.id]);
       })
     }
     else{
       console.log(curso)
       this._cursoService.saveCurso(curso).subscribe((data:any)=>{
-        console.log("Curso Agregado")
         this.router.navigate(['/cursos/'+data.id]);
       })
     }
@@ -61,7 +69,6 @@ export class AddEditCursosComponent {
 
   getCurso(idCurso:Number){
     this._cursoService.getCurso(idCurso).subscribe((data:Curso)=>{
-      console.log(data)
       this.form.setValue({
         codigo: data.codigo,
         nombre: data.materia,
@@ -70,5 +77,4 @@ export class AddEditCursosComponent {
       })
     })
   }
-
 }

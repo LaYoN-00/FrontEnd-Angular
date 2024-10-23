@@ -15,7 +15,8 @@ export class AlumnosSingUpComponent {
   constructor(private fb:FormBuilder,private _serviceUsuarios:UsuariosService,
     private router:Router){
     this.formAlumnos=this.fb.group({
-      nombre:['',Validators.required], 
+      //nombre:['',Validators.required], 
+      nombre: ['', [Validators.required, Validators.pattern('^[a-zA-Z ]+$')]],
       username:['',Validators.required], 
       password:['',Validators.required],
     })

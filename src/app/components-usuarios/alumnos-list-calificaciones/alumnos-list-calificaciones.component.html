@@ -1,22 +1,24 @@
-<div class="card mt-3">
-    <div class="title mt-3 mb-3">
-        <h4>Listado de Calificaciones</h4>
+<div class="container mt-3">
+    <h1>Listado de Calificaciones</h1>
+    <div class="btn-group mb-3" role="group" aria-label="Acciones">
+        <button routerLink="/" type="button" class="btn btn-warning"><i class="fas fa-arrow-left me-2"></i>Volver</button>
     </div>
-    <table class="table table-hover">
-        <thead>
-            <tr>
-                <th scope="col">CLASE</th>
-                <th scope="col">ACTIVIDAD</th>
-                <th scope="col">CALIFICACION</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let item of ListCalificaciones" class="table-secondary">
-                <td>{{item.clase}}</td>
-                <th>{{item.actividad}}</th>
-                <td>{{item.calificacion}}</td>
-            </tr>
-        </tbody>
-    </table>
-
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead class="text-center">
+                <tr>
+                    <th scope="col">CLASE</th>
+                    <th scope="col">ACTIVIDAD</th>
+                    <th scope="col">CALIFICACION</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr *ngFor="let item of ListCalificaciones" class="table-warning">
+                    <td>{{item.clase}}</td>
+                    <td>{{item.actividad}}</td>
+                    <td><span class="credits-badge">{{item.calificacion}}</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

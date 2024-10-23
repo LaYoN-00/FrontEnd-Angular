@@ -22,3 +22,39 @@
     width: 75%;
     font-size: small;
 }
+/********************************************************************************/
+.contenedor{
+    width: 80%;
+    margin: auto;
+}
+.card-loggin{
+    border-radius: 1rem;
+}
+.text-math{
+    font-family: 'math';
+}
+.imagenes{
+    margin: auto;
+    width: 25%;
+    height: 25%;
+}
+.form-loggin{
+    text-align: center;
+    border: 4px solid #7b9394;
+    border-radius: 15px;
+    background: #cecece;
+    color: #102d3a;
+    font: bold;
+}
+.form-loggin:hover{
+    background: #8b8b8b;
+    color: aliceblue;
+}
+.btn{
+    width: 75%;
+    font-size: small;
+}
+/*****************************************************/
+.card-header{
+    background-color: #52636b;
+}

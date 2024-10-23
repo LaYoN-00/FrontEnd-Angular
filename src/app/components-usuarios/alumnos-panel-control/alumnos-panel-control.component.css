@@ -8,5 +8,11 @@
 .btn{
     width: 90%;
     background-color: #18072e;
-    color:#cde9df
+    color: #cde9df
+}
+.btn:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background-color: #775a9e;
+    color: #00e796
 }

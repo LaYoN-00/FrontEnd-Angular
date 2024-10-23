@@ -72,7 +72,7 @@ const routes: Routes=[
     { path: 'add/:profesor', component: AddEditCursosComponent },
     { path: 'edit/:profesor/:codigo', component: AddEditCursosComponent },
     { path: 'profesor-actividades/:idprofesor', component: ProfesoresActividadesComponent},
-    { path: 'profesor-actividadesAdd', component: ProfesoresActividadesAddEditActividadesComponent},
+    { path: 'profesor-actividadesAdd/:idprofesor', component: ProfesoresActividadesAddEditActividadesComponent},
     { path: 'alumnos-sing-up', component:AlumnosSingUpComponent},
     { path: 'panel-alumnos/:idalumno', component:AlumnosPanelControlComponent},
     { path: 'alumnos-curso/:idalumno', component: AlumnosClasesComponent},

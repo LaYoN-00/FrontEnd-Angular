@@ -8,13 +8,13 @@ import { HttpClient } from "@angular/common/http";
     providedIn:'root'
 })
 export class ActividadesService{
-  //private myAppUrl: string
+  private myAppUrl: string
   private myAppUrlV2: string
   private myAPIUrl: string
   private myAPIUrlv2: string
   
   constructor(private http:HttpClient){
-    //this.myAppUrl=environment.endpoint;
+    this.myAppUrl=environment.endpoint;
     this.myAppUrlV2=environment.endpointPythonAnyWhere;
     this.myAPIUrl="api/actividad/";
     this.myAPIUrlv2="api/alumnos/actividad/";
@@ -43,5 +43,9 @@ export class ActividadesService{
 
   putEvaluarRespuestasAlumnos(alumno:number,clase:number,calificacion:number,actividad:AlumnosActualizarCalificacion):Observable<void>{
     return this.http.put<void>(this.myAppUrlV2+this.myAPIUrlv2+'actualizar/'+alumno+'/'+clase+'/'+calificacion,actividad)
+  }
+
+  putEvaluarRespuestasAlumnosV2(alumno:number,actividad:AlumnosActualizarCalificacion):Observable<void>{
+    return this.http.put<void>(this.myAppUrlV2+this.myAPIUrlv2+'actualizar/'+alumno,actividad)
   }
 }

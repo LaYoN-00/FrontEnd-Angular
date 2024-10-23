@@ -13,7 +13,6 @@ export class ProfesoresActividadesComponent {
   IDprofesor:number
   constructor(private _actividadService:ActividadesService,private aRouter:ActivatedRoute){
     this.IDprofesor=Number(aRouter.snapshot.paramMap.get('idprofesor'))
-    console.log(this.IDprofesor)
   }
   ngOnInit():void{
     this.GetListActividades();

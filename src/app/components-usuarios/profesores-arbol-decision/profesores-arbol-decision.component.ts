@@ -10,18 +10,14 @@ import { ArbolDecisionService } from 'src/app/service/arboldecision.service';
   styleUrls: ['./profesores-arbol-decision.component.css']
 })
 export class ProfesoresArbolDecisionComponent {
-  formDataArbolDecision:FormGroup;
   profesor:number
+  prediccion_1:string=''
+  prediccion_2:string=''
+  prediccion_3:string=''
+  precision:number=0
+  mensaje:string=''
   constructor(private aRouter:ActivatedRoute,private fb:FormBuilder,private _ArbolService:ArbolDecisionService){
     this.profesor=Number(this.aRouter.snapshot.paramMap.get('idprofesor'))
-    this.formDataArbolDecision=this.fb.group({
-      prediccion_1:[''],
-      prediccion_2:[''],
-      prediccion_3:[''],
-      precision:[''],
-      mensaje:['']
-    })
-    this.formDataArbolDecision.disable()
   }
 
   ngOnInit():void{
@@ -30,13 +26,11 @@ export class ProfesoresArbolDecisionComponent {
   
   setDatos(){
     this._ArbolService.getDataArbolDecision(this.profesor).subscribe((data:ArbolDecisionData)=>{
-      this.formDataArbolDecision.setValue({
-        prediccion_1:data.prediccion_1,
-        prediccion_2:data.prediccion_2,
-        prediccion_3:data.prediccion_3,
-        precision:data.precision,
-        mensaje:data.mensaje,
-      })
+      this.prediccion_1=data.prediccion_1,
+      this.prediccion_2=data.prediccion_2,
+      this.prediccion_3=data.prediccion_3,
+      this.precision=data.precision,
+      this.mensaje=data.mensaje;   
     })
   }
 }

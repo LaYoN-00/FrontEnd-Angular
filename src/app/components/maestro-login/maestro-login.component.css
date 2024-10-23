@@ -1,9 +1,17 @@
 .contenedor{
-    width: 95%;
+    width: 80%;
     margin: auto;
+}
+.card-loggin{
+    border-radius: 1rem;
 }
 .text-math{
     font-family: 'math';
+}
+.imagenes{
+    margin: auto;
+    width: 25%;
+    height: 25%;
 }
 .form-loggin{
     text-align: center;
@@ -13,10 +21,9 @@
     color: aliceblue;
     font: bold;
 }
-.imagenes-phone{
-    margin: auto;
-    width: 85%;
-    height: 70%;
+.form-loggin:hover{
+    background: #8b7fc0;
+    color: aliceblue;
 }
 .btn{
     width: 75%;

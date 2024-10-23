@@ -1,18 +1,38 @@
-.card{
-    width: 95%;
-    margin: auto;
-    font-family: 'math';
-}
-
-.card-header{
-    background-color: #6292c0;
-}
-
-.card-body{
+.form-container {
+    max-width: 90%;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid #4682b4; /* Azul acero */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     background-color: #06869e;
 }
-
-.btn{
-    background-color: #3779df;
-    width: 80%;
+.pregunta-respuesta {
+    background-color: #e6f2ff; /* Azul muy claro */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #b0c4de; /* Azul claro acero */
+}
+h2, h3 {
+    color: #00008b; /* Azul oscuro */
+    font-family: 'math';
+    font-weight: bolder;
+}
+.form-label {
+    color: #191970; /* Azul medianoche */
+    font-family: 'math';
+    font-weight: bolder;
+}
+.btn-primary {
+    background-color: #000080; /* Azul marino */
+    border-color: #000080;
+}
+.btn-primary:hover {
+    background-color: #00008b; /* Azul oscuro */
+    border-color: #00008b;
+}
+.form-control:focus {
+    border-color: #4682b4;
+    box-shadow: 0 0 0 0.2rem rgba(70, 130, 180, 0.25)
 }

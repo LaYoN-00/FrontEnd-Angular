@@ -1,0 +1,38 @@
+.contenedor {
+    background-color: #88bef8;
+    width: 95%;
+    margin: auto;
+}
+.custom-card {
+    background-color: #ffffff;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.custom-card .card-body {
+    background-color: #d3eaff;
+}
+.custom-card .card-title {
+    color: #0056b3;
+}
+.custom-card .list-group-item {
+    background-color: #c2e0ff;
+    border-color: #b3d7ff;
+    display: flex;
+    align-items: center;
+}
+.prediction-label {
+    color: #004085;
+    margin-right: 10px;
+}
+.prediction-icon {
+    margin-right: 10px;
+    color: #007bff;
+}
+.description {
+    background-color: #cce5ff;
+    border: 1px solid #b8daff;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: #004085;
+}

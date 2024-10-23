@@ -1,8 +1,31 @@
-<p>profesores-arbol-decision works!</p>
-<form [formGroup]="formDataArbolDecision">
-    <input formControlName="prediccion_1" type="text" class="form-control mt-3">
-    <input formControlName="prediccion_2" type="text" class="form-control mt-3">
-    <input formControlName="prediccion_3" type="text" class="form-control mt-3">
-    <input formControlName="precision" type="text" class="form-control mt-3">
-    <input formControlName="mensaje" type="text" class="form-control mt-3">
-</form>
+<div class="contenedor">
+    <div class="container mt-5">
+        <h1 class="mb-4 text-center text-primary">Resultados del Árbol de Decisión</h1>
+        <p class="description">
+            El árbol de decisión predice el tipo de refuerzo que requieren los alumnos usando como entrenamiento las calificaciones y tiempos que les tomen hacer las actividades.
+        </p>
+        <div class="card custom-card">
+            <div class="card-body">
+                <h5 class="card-title">{{mensaje}}</h5>
+                <p class="card-text text-info">Precisión: <span class="fw-bold">{{precision}}</span>%</p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <i data-lucide="book-open" class="prediction-icon"></i>
+                        <span class="prediction-label">Predicción 1: </span>
+                        <span class="fw-bold text-primary">{{prediccion_1}}</span>
+                    </li>
+                    <li class="list-group-item">
+                        <i data-lucide="book" class="prediction-icon"></i>
+                        <span class="prediction-label">Predicción 2: </span>
+                        <span class="fw-bold text-primary">{{prediccion_2}}</span>
+                    </li>
+                    <li class="list-group-item">
+                        <i data-lucide="graduation-cap" class="prediction-icon"></i>
+                        <span class="prediction-label">Predicción 3: </span>
+                        <span class="fw-bold text-primary">{{prediccion_3}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

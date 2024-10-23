@@ -66,7 +66,6 @@ export class AlumnosActividadesFormComponent {
         pregunta10:data.inciso_10,
       })
       this.idActividad=data.id_actividad
-      this.formPreguntas.disable();
     })
   }
   EnviarRespuestas(){
@@ -82,15 +81,18 @@ export class AlumnosActividadesFormComponent {
       respuesta9:this.formRespuestas.value.respuesta9,
       respuesta10:this.formRespuestas.value.respuesta10
     }
-    const newCalificacion:AlumnosActualizarCalificacion={
-      actividad:this.actividad,
-      tiempo:this.tiempo
-    }
 
     this._ActividadesService.postEnviarRespuestasAlumnos(this.idActividad,respuestas).subscribe((data:any)=>{
       this.aciertos=data.TotalAciertos
-      this._ActividadesService.putEvaluarRespuestasAlumnos(this.alumno,this.clase,this.aciertos,newCalificacion).subscribe((data:any)=>{
-        console.log(data.mensaje)
+      
+      const newCalificacion:AlumnosActualizarCalificacion={
+        id_actividad:this.idActividad,
+        id_clase:this.clase,	
+        calificacion:this.aciertos,
+        tiempo:this.tiempo
+      }
+      this._ActividadesService.putEvaluarRespuestasAlumnosV2(this.alumno,newCalificacion).subscribe((data:any)=>{
+        alert("TIEMPO DE ACTIVIDAD:"+this.tiempo+'\n'+data.mensaje);
       })
     })
 

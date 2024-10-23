@@ -1,26 +1,30 @@
-<div class="card mt-3">
-    <div class="title mt-3 mb-3">
-        <h4>Listado de Cursos</h4>
+<div class="container mt-3">
+    <h1>Listado de Cursos</h1>
+    <div class="btn-group mb-3" role="group" aria-label="Acciones">
+        <button routerLink="/panel-alumnos/{{IDalumno}}" type="button" class="btn btn-success"><i class="fas fa-arrow-left me-2"></i>Volver</button>
     </div>
-    <table class="table table-hover">
-        <thead>
-            <tr>
-                <th scope="col">CODIGO</th>
-                <th scope="col">MATERIA</th>
-                <th scope="col">PROFESOR</th>
-                <th scope="col">CREDITOS</th>
-                <th scope="col">ACCIONES</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let item of ListCurso" class="table-secondary">
-                <th scope="row">{{item.codigo}}</th>
-                <td>{{item.materia}}</td>
-                <td>{{item.profesor}}</td>
-                <td>{{item.creditos}}</td>
-                <td><button (click)="addMatricula(item.id_curso!)" type="button" class="btn btn-outline-success btn-sm">UNIRSE</button></td>
-            </tr>
-        </tbody>
-    </table>
-
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead class="text-center">
+                <tr>
+                    <th scope="col">CODIGO</th>
+                    <th scope="col">MATERIA</th>
+                    <th scope="col">PROFESOR</th>
+                    <th scope="col">CREDITOS</th>
+                    <th scope="col">UNIRSE</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr *ngFor="let item of ListCurso" class="table-success">
+                    <td>{{item.codigo}}</td>
+                    <td>{{item.materia}}</td>
+                    <td>{{item.profesor}}</td>
+                    <td><span class="credits-badge">{{item.creditos}}</span></td>
+                    <td>
+                        <button (click)="addMatricula(item.id_curso!)" type="button" class="btn btn-sm btn-action btn-delete"><span class="material-symbols-outlined">join_inner</span></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

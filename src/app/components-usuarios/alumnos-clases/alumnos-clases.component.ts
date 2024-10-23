@@ -20,7 +20,6 @@ export class AlumnosClasesComponent {
   getListCursos(){
     this._UsuariosService.ListarCursoAlumnos().subscribe((data:Curso[])=>{
       this.ListCurso=data
-      console.log(this.ListCurso)
     })
   }
   addMatricula(idCurso:number){
@@ -29,7 +28,7 @@ export class AlumnosClasesComponent {
       idalumno:this.IDalumno
     }
     this._UsuariosService.MatricularAlumno(matricula).subscribe((data:any)=>{
-      console.log(data)
+      
     })
   }
 }

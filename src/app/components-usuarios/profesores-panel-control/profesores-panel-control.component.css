@@ -7,6 +7,12 @@
 }
 .btn{
     width: 90%;
-    background-color: #7cf0ef;
-    color:black
+    background-color: #53aaa9;
+    color:rgb(255, 255, 255)
+}
+.btn:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background-color: #6de2e0;
+    color: black;
 }

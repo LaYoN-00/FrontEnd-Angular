@@ -9,3 +9,76 @@
     margin: auto;
     font-family: 'math';
 }
+/*******************************************/
+.container {
+    background-color: #5372ce;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+h1{
+    color: #ffffff;
+    font-weight: 600;
+    font-family: 'math';
+    margin-bottom: 30px;
+    text-align: center;
+}
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+.table thead {
+    background-color: #3498db;
+    color: #ffffff;
+}
+.table th, .table td {
+    vertical-align: middle;
+}
+.btn-action {
+    padding: 5px 10px;
+    margin: 2px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+.btn-edit {
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+}
+.btn-delete {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+}
+.btn-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.btn-group {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.btn-group .btn {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+.btn-group .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.credits-badge {
+    background-color: #79b2d8;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+.material-symbols-outlined{
+    color: #000000;
+}
+.material-symbols-outlined:hover{
+    color: #ffffff;
+}

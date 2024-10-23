@@ -12,6 +12,7 @@ import { RedNeuronalService } from 'src/app/service/redneuronal.service';
 export class RedesNeuronalesComponent {
   formPeticionRed: FormGroup;
   public resultado: any=null;
+  loading:boolean=false;
   
   constructor(private fb:FormBuilder,private _ServiceRed:RedNeuronalService){
     this.formPeticionRed=this.fb.group({
@@ -22,6 +23,7 @@ export class RedesNeuronalesComponent {
   }
 
   SendPeticionRed(){
+    this.loading=true
     const peticion: RedPeticion={
       coeficiente:this.formPeticionRed.value.coeficiente,
       variableA:this.formPeticionRed.value.variableA,
@@ -29,10 +31,12 @@ export class RedesNeuronalesComponent {
     }
     this._ServiceRed.postRedPeticion(peticion).subscribe((data:any)=>{
       this.resultado=data.prediccion
+      this.loading=false
     })
   }
 
   SendPeticionRedv2(){
+    this.loading=true
     const peticion: RedPeticion={
       coeficiente:this.formPeticionRed.value.coeficiente,
       variableA:this.formPeticionRed.value.variableA,
@@ -40,6 +44,7 @@ export class RedesNeuronalesComponent {
     }
     this._ServiceRed.postRedPeticionV2(peticion).subscribe((data:any)=>{
       this.resultado=data.prediccion
+      this.loading=false
     })
   }
 }
