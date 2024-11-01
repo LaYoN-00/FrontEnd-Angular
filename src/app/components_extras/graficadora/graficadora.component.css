@@ -1,0 +1,39 @@
+.form-container {
+    background-color: #aba2f0;
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+    background-color: rgb(173, 216, 230);
+    border-color: #006be6;
+}
+
+.form-control:focus {
+    background-color: rgba(173, 216, 230, 0.5);
+    border-color: #1e3c72;
+    box-shadow: 0 0 0 0.2rem rgba(30, 60, 114, 0.25);
+}
+
+.btn-graficadora {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+}
+.btn-graficadora:hover {
+    background-color: #1e3c72;
+    border-color: #1e3c72;
+}
+
+.grafica-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;;
+}
+  
+canvas {
+    background-color: #aba2f0;
+}
+  

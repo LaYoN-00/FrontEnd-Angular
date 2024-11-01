@@ -41,7 +41,7 @@ export class CursoService {
 
   getCodigos(id:Number):Observable<CursoCodigo[]>{
     //http://127.0.0.1:5000/api/cursos/codigos/5
-    return this.http.get<CursoCodigo[]>(this.myAppUrl+this.myAPIUrl+'codigos/'+id)
+    return this.http.get<CursoCodigo[]>(this.myAppUrlV2+this.myAPIUrl+'codigos/'+id)
   }
 
 }

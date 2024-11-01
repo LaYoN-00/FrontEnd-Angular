@@ -45,6 +45,7 @@ import { AlumnosActividadesComponent } from './components-usuarios/alumnos-activ
 import { AlumnosActividadesFormComponent } from './components-usuarios/alumnos-actividades-form/alumnos-actividades-form.component';
 import { AlumnosListCalificacionesComponent } from './components-usuarios/alumnos-list-calificaciones/alumnos-list-calificaciones.component';
 import { ProgressBarComponent } from './shared/progress-bar/progress-bar.component';
+import { GraficadoraComponent } from './components_extras/graficadora/graficadora.component';
 
 @NgModule({
   declarations: [
@@ -88,6 +89,7 @@ import { ProgressBarComponent } from './shared/progress-bar/progress-bar.compone
     AlumnosActividadesFormComponent,
     AlumnosListCalificacionesComponent,
     ProgressBarComponent,
+    GraficadoraComponent,
   ],
   imports: [
     BrowserModule,

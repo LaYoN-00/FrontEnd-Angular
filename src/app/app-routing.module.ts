@@ -39,6 +39,7 @@ import { AlumnosClasesComponent } from "./components-usuarios/alumnos-clases/alu
 import { AlumnosActividadesComponent } from "./components-usuarios/alumnos-actividades/alumnos-actividades.component";
 import { AlumnosActividadesFormComponent } from "./components-usuarios/alumnos-actividades-form/alumnos-actividades-form.component";
 import { AlumnosListCalificacionesComponent } from "./components-usuarios/alumnos-list-calificaciones/alumnos-list-calificaciones.component";
+import { GraficadoraComponent } from "./components_extras/graficadora/graficadora.component";
 
 const routes: Routes=[
     { path: '', component: PaginaPrincipalComponent },
@@ -79,6 +80,7 @@ const routes: Routes=[
     { path: 'alumnos-actividades/:idalumno', component: AlumnosActividadesComponent},
     { path: 'alumnos-actividades-form/:alumno/:clase/:actividad', component: AlumnosActividadesFormComponent},
     { path: 'alumnos-list-calificaciones/:alumno', component: AlumnosListCalificacionesComponent},
+    { path: 'grafica',component: GraficadoraComponent },
     { path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 

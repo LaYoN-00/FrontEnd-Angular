@@ -53,11 +53,11 @@ export class UsuariosService{
     }
 
     ConfirmacionMaestros(id:number):Observable<void>{
-        return this.http.get<void>(this.myAppUrl+this.myAPIUrl+'/confirmacion/'+id)
+        return this.http.get<void>(this.myAppUrlV2+this.myAPIUrl+'/confirmacion/'+id)
     }
 
     ConfirmacionAlumnos(id:number):Observable<void>{
-        return this.http.get<void>(this.myAppUrl+this.myAPIUrlV2+'/confirmacion/'+id)
+        return this.http.get<void>(this.myAppUrlV2+this.myAPIUrlV2+'/confirmacion/'+id)
     }
 
 }

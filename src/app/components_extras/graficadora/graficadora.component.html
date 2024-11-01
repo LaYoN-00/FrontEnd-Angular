@@ -1,0 +1,37 @@
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="form-container">
+                <h2 class="text-center text-dark mb-4">GRAFICADORA BASICA</h2>
+                <form [formGroup]="FormExpresion" (ngSubmit)="sendExpresion()">
+                    <div class="mb-3">
+                        <label class="form-label text-dark"><strong>Variable X</strong></label>
+                        <select formControlName="variable" class="form-control">
+                            <option disabled selected>X simple</option>
+                            <option value="1">X</option>
+                            <option disabled selected>X trigonometrica</option>
+                            <option value="2">Seno de X</option>
+                            <option value="3">Conseno de X</option>
+                            <option value="4">Tangente de X</option>
+                            <option value="5">Arcoseno de X</option>
+                            <option value="6">Arcotangente de X</option>
+                            <option disabled selected>X exponencial y logaritmica</option>
+                            <option value="7">Exponencial de X (e^x)</option>
+                            <option value="8">Logaritmo natural (base e) de x</option>
+                            <option value="9">Logaritmo en base 10 de x</option>
+                            <option value="10">Raíz cuadrada de x</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="input2" class="form-label text-dark"><strong>Expresion (No olvides colocar un simbolo antes de escribir la expresion)</strong></label>
+                        <input type="text" formControlName="expresion" class="form-control">
+                    </div>
+                    <button [disabled]="FormExpresion.invalid" type="submit" class="btn btn-graficadora w-100">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <div class="grafica-container mt-3">
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+</div>

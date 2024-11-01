@@ -9,6 +9,10 @@
                     <select formControlName="coeficiente" class="form-select mt-3" id="coeficiente">
                         <option value="" disabled selected>Selecciona un coeficiente</option>
                         <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
                     </select>
                     <span *ngIf="formPeticionRed.get('coeficiente')?.hasError('required') && formPeticionRed.get('coeficiente')?.touched">
                         <strong>Recuerda que las variables son IMPORTANTES</strong>
