@@ -25,7 +25,7 @@ export class RedesNeuronalesComponent {
   SendPeticionRed(){
     this.loading=true
     const peticion: RedPeticion={
-      coeficiente:this.formPeticionRed.value.coeficiente,
+      coeficiente:Number(this.formPeticionRed.value.coeficiente),
       variableA:this.formPeticionRed.value.variableA,
       variableB:this.formPeticionRed.value.variableB
     }
